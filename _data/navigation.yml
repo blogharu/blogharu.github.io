@@ -1,0 +1,8 @@
+- name: CS
+  link: /cs.html
+- name: Math
+  link: /math.html
+- name: about
+  link: /about.html
+- name: Contect
+  link: /contect.html
