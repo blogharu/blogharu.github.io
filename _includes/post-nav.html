@@ -1,0 +1,22 @@
+<div class="post-nav">
+  {%- assign contents = site.cs | where: "subject", page.subject -%}
+  <div class="post-nav-prev">
+    {%- assign index = page.page | minus:1 -%}
+    {%- if index > 0 -%}
+    <a href="{{contents[index].url}}"> < {{contents[index].page}}. {{contents[index].title}} </a>
+    {%- else -%}
+    <p>무</p>
+    {%- endif -%}
+  </div>
+  <div class="post-nav-contents">
+    <a href="{{contents[0].url}}">목차</a>
+  </div>
+  <div class="post-nav-next">
+    {%- assign index = page.page | plus:1 -%}
+    {%- if contents[index] -%}
+    <a href="{{contents[index].url}}"> {{contents[index].page}}. {{contents[index].title}} > </a>
+    {%- else -%}
+    <p>무</p>
+    {%- endif -%}
+  </div>
+</div>

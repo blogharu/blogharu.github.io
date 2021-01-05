@@ -1,0 +1,61 @@
+.post {
+  width: 500px;
+  margin: auto;
+}
+
+.post-content h2{
+  padding-left: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.post-content h3{
+  padding-left: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.post-content h4{
+  padding-left: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.post-content h5{
+  padding-left: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.post-content p{
+  font-size: 10px;
+  padding-bottom: 10px;
+  padding-right: 8px;
+  width: 484px;
+  word-wrap: break-word; // p width 초과시 new line
+  line-height: 2.2; // 줄 사이 간격
+}
+
+.post-content ul{
+  margin: 0px;
+  padding-bottom: 8px;
+}
+
+.post-content li{
+  font-size: 10px;
+}
+
+.post-content a{
+  font-size: 10px;
+}
+
+.post-title{
+  margin: 0px;
+  padding-left: 8px;
+  height: 25px;
+}
+
+.post p{
+  margin: 0px;
+  padding-left: 8px;
+}

@@ -1,6 +1,13 @@
+// no dragging
+* {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
 
 //warp
-
 .warp{
   width: 600px;
   margin: auto;
@@ -14,19 +21,22 @@
   height: auto;
 }
 
+// a
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #333333;
+}
 
 // code
-
 .highlight{
   background:#222222;
   color:#aab1bf;
   margin: 0px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
   overflow: auto
-}
-.current {
-  color: green;
 }

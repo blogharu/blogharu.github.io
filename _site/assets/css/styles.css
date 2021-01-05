@@ -1,10 +1,14 @@
+* { -ms-user-select: none; -moz-user-select: -moz-none; -khtml-user-select: none; -webkit-user-select: none; user-select: none; }
+
 .warp { width: 600px; margin: auto; }
 
 .content { overflow: hidden; margin-left: 16px; margin-right: 16px; height: auto; }
 
-.highlight { background: #222222; color: #aab1bf; margin: 0px; padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px; overflow: auto; }
+a { color: #000000; text-decoration: none; }
 
-.current { color: green; }
+a:hover { color: #333333; }
+
+.highlight { background: #222222; color: #aab1bf; margin: 0px; padding-left: 16px; padding-right: 16px; overflow: auto; }
 
 header { height: 40px; margin-bottom: 5px; }
 
@@ -20,26 +24,56 @@ header { height: 40px; margin-bottom: 5px; }
 
 footer { margin-top: 5px; }
 
+.post-nav-prev { float: left; width: 235px; }
+
+.post-nav-contents { width: 30px; display: inline; text-align: center; }
+
+.post-nav-next { float: right; width: 235px; text-align: right; }
+
+.post-nav p { margin: 0px; color: #FFFFFF; }
+
 .categories { margin-left: 2px; margin-right: 2px; margin-bottom: 16px; overflow: hidden; height: auto; }
 
 .category-title { margin: 0px; padding-left: 8px; }
 
 .category { width: 172px; margin-left: 8px; margin-right: 8px; float: left; }
 
-.category a { color: #000000; text-decoration: none; }
+.category a { text-decoration: none; color: #000000; }
+
+.category a:hover { color: #333333; }
 
 .contents { width: 400px; margin: auto; }
 
-.contents p { margin: 0; padding-left: 8px; }
+.contents p { margin: 0; padding-left: 8px; height: 25px; align-self: flex-end; }
 
-.contents a { padding-left: 8px; text-decoration: none; }
-
-.contents a:link { color: #222222; }
+.contents a { padding-left: 8px; text-decoration: none; color: #000000; }
 
 .contents a:visited { color: #888888; }
 
-.contents a:hover { color: #000000; }
+.contents a:hover { color: #333333; }
 
 .contents ol { margin-top: 8px; padding-left: 24px; }
+
+.post { width: 500px; margin: auto; }
+
+.post-content h2 { padding-left: 8px; margin-top: 8px; margin-bottom: 8px; }
+
+.post-content h3 { padding-left: 8px; margin-top: 8px; margin-bottom: 8px; }
+
+.post-content h4 { padding-left: 8px; margin-top: 8px; margin-bottom: 8px; }
+
+.post-content h5 { padding-left: 8px; margin-top: 8px; margin-bottom: 8px; }
+
+.post-content p { font-size: 10px; padding-bottom: 10px; padding-right: 8px; width: 484px; word-wrap: break-word; line-height: 2.2; }
+
+.post-content ul { margin: 0px; padding-bottom: 8px; }
+
+.post-content li { font-size: 10px; }
+
+.post-content a { font-size: 10px; }
+
+.post-title { margin: 0px; padding-left: 8px; height: 25px; }
+
+.post p { margin: 0px; padding-left: 8px; }
 
 /*# sourceMappingURL=styles.css.map */
