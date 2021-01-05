@@ -1,0 +1,35 @@
+.contents {
+  width: 400px;
+  margin: auto;
+}
+
+.contents p{
+  margin: 0;
+  padding-left: 8px;
+}
+
+.contents a{
+  padding-left: 8px;
+  text-decoration: none;
+}
+
+.contents a:link{
+  // Before visit
+  color: #222222;
+}
+
+.contents a:visited{
+  // after visit
+  color: #888888;
+}
+
+.contents a:hover {
+  // When mouse is on the link
+  color: #000000;
+}
+
+
+.contents ol{
+  margin-top: 8px;
+  padding-left: 24px;
+}

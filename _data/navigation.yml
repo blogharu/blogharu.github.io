@@ -1,8 +1,8 @@
-- name: CS
-  link: /cs.html
-- name: Math
-  link: /math.html
-- name: about
-  link: /about.html
+#- name: Math
+#  link: /math.html
 - name: Contect
   link: /contect.html
+- name: About
+  link: /about.html
+- name: CS
+  link: /cs.html

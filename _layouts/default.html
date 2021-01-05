@@ -6,13 +6,12 @@
     <title>{{ page.title }}</title>
   </head>
   <body>
-    <div class="head">
-      <div class="head-nav">
-        {% include navigation.html %}
+    <div class="warp">
+      {% include header.html %}
+      <div class="content">
+      {{ content }}
       </div>
+      {% include footer.html %}
     </div>
-    <h1> TITLE </h1>
-    {% include navigation.html %}
-    {{ content }}
   </body>
 </html>

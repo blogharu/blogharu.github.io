@@ -1,0 +1,20 @@
+- category: 웹 개발
+  sub_categories:
+    - html
+    - css
+    - jekyll
+    - html
+    - css
+    - jekyll
+  link: /contect.html
+- category: 프로그래밍 언어
+  sub_categories:
+    - python
+    - c++
+    - java
+  link: /about.html
+- category: 미분류
+  sub_categories:
+    - yml
+    - 미분류
+  link: /cs.html

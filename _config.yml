@@ -1,5 +1,15 @@
 
+# site variables. site.var
+
 title: "공부하는 하루"
 email: "blogharu@gmail.com"
-baseurl: "/blogharu"
+#baseurl: "/blogharu"
 url: "https://blogharu.github.io"
+
+# site collections
+
+collections:
+  cs:
+    output: true
+  math:
+    output: false

@@ -1,0 +1,32 @@
+
+//warp
+
+.warp{
+  width: 600px;
+  margin: auto;
+}
+
+// content
+.content{
+  overflow:hidden;
+  margin-left: 16px;
+  margin-right: 16px;
+  height: auto;
+}
+
+
+// code
+
+.highlight{
+  background:#222222;
+  color:#aab1bf;
+  margin: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: auto
+}
+.current {
+  color: green;
+}

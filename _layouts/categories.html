@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{%- case page.category -%}
+{%- when "cs" -%}{%- assign categories = site.data.cs_categories -%}
+{%- when "math" -%}{%- assign categories = site.data.math_categories -%}
+{%- endcase -%}
+
+<div>
+{%- for category in categories -%}
+  {%- capture var -%}{%- cycle "first", "second", "third" -%}{%- endcapture -%}
+  {%- case var -%} {%- when "first" -%}</div><div class="categories"> {%- endcase -%}
+  <div class="category">
+    <p class="category-title">{{category.category}}</p>
+    <hr>
+    <ul>
+    {%- for subcategory in category.sub_categories -%}
+      <li><a href="/cs/{{subcategory}}/00_contents.html">{{subcategory}}</a></li>
+    {%- endfor -%}
+    </ul>
+  </div>
+{%- endfor -%}
+</div>

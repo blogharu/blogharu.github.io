@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div class="contents">
+  <p class="contents-title">{{page.subject}} 목록</p>
+  <hr>
+  <ol>
+    {%- assign contents = site.cs | where: "subject", page.subject -%}
+    {%- for content in contents -%}
+      {%- if content.title != page.title -%}
+        <li><a href={{content.url}} class="contents-content">{{content.title}}</a></li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ol>
+</div>

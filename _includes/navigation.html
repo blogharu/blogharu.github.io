@@ -1,8 +1,15 @@
 <nav>
-  <a class="site-title" href="/">{{site.title}}</a>
-  {% for item in site.data.navigation %}
+  <div class="nav-index">
+    <a href="/">{{site.title}}</a>
+  </div>
+  <div class="nav-categories">
+    {%- for item in site.data.navigation -%}
+    <div>
     <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
       {{ item.name }}
     </a>
-  {% endfor %}
+    </div>
+    {%- endfor -%}
+  </div>
+  <div style="clear:both"></div>
 </nav>
