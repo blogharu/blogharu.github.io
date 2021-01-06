@@ -10,17 +10,33 @@ a:hover { color: #333333; }
 
 .highlight { background: #222222; color: #aab1bf; margin: 0px; padding-left: 16px; padding-right: 16px; overflow: auto; }
 
-header { height: 40px; margin-bottom: 5px; }
+.about p { text-align: center; }
 
-.nav-index { display: inline; width: 200px; float: left; }
+a { font-size: 16px; }
 
-.nav-categories { width: 400px; float: right; }
+h1 { font-size: 32px; }
 
-.nav-categories div { float: right; }
+h2 { font-size: 28px; }
 
-.nav-categories a { align-self: center; }
+h3 { font-size: 24px; }
 
-.header-nav a { margin: 1rem; color: #000000; text-decoration: none; text-align: center; }
+h4 { font-size: 20px; }
+
+h5 { font-size: 16px; }
+
+p { font-size: 16px; }
+
+header { height: 190px; margin-bottom: 5px; border-bottom: 1px solid black; }
+
+.header-title { padding-top: 8px; text-align: center; height: auto; }
+
+nav { border-bottom: 1px solid black; padding-bottom: 8px; }
+
+.header-nav-categories { width: 400px; }
+
+.header-nav-categories div { float: left; }
+
+.header-nav-categories a { align-self: center; margin: 1rem; }
 
 footer { margin-top: 5px; }
 
@@ -30,19 +46,21 @@ footer { margin-top: 5px; }
 
 .post-nav-next { float: right; width: 235px; text-align: right; }
 
-.post-nav p { margin: 0px; color: #FFFFFF; }
+.post-nav p { margin: 0px; opacity: 0; }
 
 .categories { margin-left: 2px; margin-right: 2px; margin-bottom: 16px; overflow: hidden; height: auto; }
 
-.category-title { margin: 0px; padding-left: 8px; }
+.category-title { margin: 0px; padding-left: 8px; height: 30px; border-bottom: 1px solid black; }
 
 .category { width: 172px; margin-left: 8px; margin-right: 8px; float: left; }
+
+.category ul { margin-top: 12px; }
 
 .category a { text-decoration: none; color: #000000; }
 
 .category a:hover { color: #333333; }
 
-.contents { width: 400px; margin: auto; }
+.contents { width: 500px; margin: auto; }
 
 .contents p { margin: 0; padding-left: 8px; height: 25px; align-self: flex-end; }
 
@@ -64,7 +82,7 @@ footer { margin-top: 5px; }
 
 .post-content h5 { padding-left: 8px; margin-top: 8px; margin-bottom: 8px; }
 
-.post-content p { font-size: 10px; padding-bottom: 10px; padding-right: 8px; width: 484px; word-wrap: break-word; line-height: 2.2; }
+.post-content p { padding-bottom: 10px; padding-right: 8px; width: 484px; word-wrap: break-word; line-height: 2; }
 
 .post-content ul { margin: 0px; padding-bottom: 8px; }
 
@@ -72,7 +90,7 @@ footer { margin-top: 5px; }
 
 .post-content a { font-size: 10px; }
 
-.post-title { margin: 0px; padding-left: 8px; height: 25px; }
+.post-title { margin: 0px; padding-left: 8px; padding-bottom: 8px; height: 38px; border-bottom: 1px solid black; margin-bottom: 12px; }
 
 .post p { margin: 0px; padding-left: 8px; }
 

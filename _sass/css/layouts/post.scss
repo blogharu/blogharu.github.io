@@ -28,12 +28,11 @@
 }
 
 .post-content p{
-  font-size: 10px;
   padding-bottom: 10px;
   padding-right: 8px;
   width: 484px;
   word-wrap: break-word; // p width 초과시 new line
-  line-height: 2.2; // 줄 사이 간격
+  line-height: 2; // 줄 사이 간격
 }
 
 .post-content ul{
@@ -52,7 +51,10 @@
 .post-title{
   margin: 0px;
   padding-left: 8px;
-  height: 25px;
+  padding-bottom: 8px;
+  height: 38px;
+  border-bottom: 1px solid black;
+  margin-bottom: 12px;
 }
 
 .post p{

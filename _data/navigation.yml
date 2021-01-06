@@ -2,7 +2,7 @@
 #  link: /math.html
 #- name: Contect
 #  link: /contect.html
-- name: About
-  link: /about.html
+#- name: About
+#  link: /about.html
 - name: CS
   link: /cs.html

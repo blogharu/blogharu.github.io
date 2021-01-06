@@ -2,34 +2,33 @@
 // header
 
 header {
-  height: 40px;
+  height: 190px;//120px;
   margin-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+
+.header-title{
+  padding-top: 8px;
+  text-align: center;
+  height: auto;
 }
 
 // include navigation.html
 
-.nav-index{
-  display: inline;
-  width: 200px;
-  float: left;
+nav{
+  border-bottom: 1px solid black;
+  padding-bottom: 8px;
 }
 
-.nav-categories{
+.header-nav-categories{
   width: 400px;
-  float: right;
 }
 
-.nav-categories div{
-  float: right
+.header-nav-categories div{
+  float: left
 }
 
-.nav-categories a{
+.header-nav-categories a{
   align-self: center;
-}
-
-.header-nav a{
   margin: 1rem;
-  color: #000000;
-  text-decoration: none;
-  text-align: center;
 }

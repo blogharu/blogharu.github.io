@@ -3,8 +3,7 @@ layout: default
 ---
 <div class="post">
   <div>
-    <p class="post-title">{{page.page}}. {{page.title}}</p>
-    <hr>
+    {% include post-title.html %}
     <div class="post-content">
       {{ content }}
     </div>

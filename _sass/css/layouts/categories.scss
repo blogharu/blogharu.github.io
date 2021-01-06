@@ -9,6 +9,8 @@
 .category-title{
   margin: 0px;
   padding-left: 8px;
+  height: 30px;
+  border-bottom: 1px solid black;
 }
 
 .category{
@@ -16,6 +18,10 @@
   margin-left: 8px;
   margin-right: 8px;
   float: left;
+}
+
+.category ul{
+  margin-top: 12px;
 }
 
 .category a{

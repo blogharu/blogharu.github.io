@@ -2,8 +2,7 @@
 layout: default
 ---
 <div class="contents">
-  <p class="contents-title">{{page.subject}} 목차</p>
-  <hr>
+  {% include post-title.html %}
   <ol>
     {%- assign contents = site.cs | where: "subject", page.subject -%}
     {%- for content in contents -%}

@@ -12,8 +12,7 @@ layout: default
   {%- capture var -%}{%- cycle "first", "second", "third" -%}{%- endcapture -%}
   {%- case var -%} {%- when "first" -%}</div><div class="categories"> {%- endcase -%}
   <div class="category">
-    <p class="category-title">{{category.category}}</p>
-    <hr>
+    <h5 class="category-title">{{category.category}}</h5>
     <ul>
     {%- for subcategory in category.sub_categories -%}
       <li><a href="/cs/{{subcategory}}/00.contents.html">{{subcategory}}</a></li>
