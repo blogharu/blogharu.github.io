@@ -4,7 +4,7 @@ layout: default
 <div class="contents">
   {% include post-title.html %}
   <ol>
-    {%- assign contents = site.cs | where: "subject", page.subject -%}
+    {%- assign contents = site.cs | where: "category", page.category -%}
     {%- for content in contents -%}
       {%- if content.title != page.title -%}
         <li><a href={{content.url}} class="contents-content">{{content.title}}</a></li>

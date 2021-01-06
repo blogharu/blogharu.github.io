@@ -40,6 +40,8 @@ nav { border-bottom: 1px solid black; padding-bottom: 8px; }
 
 footer { margin-top: 5px; }
 
+.post-nav { border-top: 1px solid black; padding-top: 4px; }
+
 .post-nav-prev { float: left; width: 235px; }
 
 .post-nav-contents { width: 30px; display: inline; text-align: center; }
@@ -86,9 +88,9 @@ footer { margin-top: 5px; }
 
 .post-content ul { margin: 0px; padding-bottom: 8px; }
 
-.post-content li { font-size: 10px; }
+.post-content li { font-size: 16px; }
 
-.post-content a { font-size: 10px; }
+.post-content a { font-size: 16px; }
 
 .post-title { margin: 0px; padding-left: 8px; padding-bottom: 8px; height: 38px; border-bottom: 1px solid black; margin-bottom: 12px; }
 
