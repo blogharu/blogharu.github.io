@@ -8,8 +8,6 @@ a { color: #000000; text-decoration: none; }
 
 a:hover { color: #333333; }
 
-.highlight { background: #222222; color: #aab1bf; margin: 0px; padding-left: 16px; padding-right: 16px; overflow: auto; }
-
 .about p { text-align: center; }
 
 a { font-size: 16px; }
@@ -25,6 +23,8 @@ h4 { font-size: 20px; }
 h5 { font-size: 16px; }
 
 p { font-size: 16px; }
+
+pre { font-size: 16px; }
 
 header { height: 190px; margin-bottom: 5px; border-bottom: 1px solid black; }
 
@@ -76,15 +76,19 @@ footer { margin-top: 5px; }
 
 .post { width: 500px; margin: auto; }
 
+.post-img-title { margin-bottom: 24px; }
+
 .post-content h2 { padding-left: 8px; margin-top: 8px; margin-bottom: 8px; }
 
-.post-content h3 { padding-left: 8px; margin-top: 8px; margin-bottom: 8px; }
+.post-content h3 { padding-left: 8px; margin-top: 8px; margin-bottom: 32px; }
 
-.post-content h4 { padding-left: 8px; margin-top: 8px; margin-bottom: 8px; }
+.post-content h4 { padding-left: 8px; margin-top: 8px; margin-bottom: 28px; }
 
-.post-content h5 { padding-left: 8px; margin-top: 8px; margin-bottom: 8px; }
+.post-content h5 { padding-left: 8px; margin-top: 8px; margin-bottom: 28px; }
 
 .post-content p { padding-bottom: 10px; padding-right: 8px; width: 484px; word-wrap: break-word; line-height: 2; }
+
+.post-content pre { padding-bottom: 10px; padding-right: 8px; padding-left: 8px; width: 484px; overflow: auto; white-space: pre-wrap; line-height: 2; }
 
 .post-content ul { margin: 0px; padding-bottom: 8px; }
 
@@ -95,5 +99,9 @@ footer { margin-top: 5px; }
 .post-title { margin: 0px; padding-left: 8px; padding-bottom: 8px; height: 38px; border-bottom: 1px solid black; margin-bottom: 12px; }
 
 .post p { margin: 0px; padding-left: 8px; }
+
+.highlight { background: #222222; color: #aab1bf; margin: 0px; padding-left: 0px; padding-right: 8px; overflow: auto; }
+
+.highlight pre { margin: 0px; padding-bottom: 0px; width: auto; }
 
 /*# sourceMappingURL=styles.css.map */
