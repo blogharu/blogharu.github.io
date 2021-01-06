@@ -1,5 +1,5 @@
 <div class="post-nav">
-  {%- assign contents = site.cs | where: "subject", page.subject -%}
+  {%- assign contents = site.cs | where: "subcategory", page.subcategory -%}
   <div class="post-nav-prev">
     {%- assign index = page.page | minus:1 -%}
     {%- if index > 0 -%}
