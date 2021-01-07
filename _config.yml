@@ -4,7 +4,7 @@
 title: "공부하는 하루"
 subtitle: "컴퓨터를 공부해보자"
 email: "blogharu@gmail.com"
-#baseurl: "/blogharu"
+baseurl: ""
 url: "https://blogharu.github.io"
 
 # site collections
@@ -14,3 +14,7 @@ collections:
     output: true
   math:
     output: false
+
+# plugins
+plugins:
+  - jekyll-seo-tag
