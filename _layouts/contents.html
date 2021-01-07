@@ -1,10 +1,16 @@
 ---
 layout: default
 ---
+
+{%- case page.category -%}
+{%- when "cs" -%}{%- assign collection = site.cs -%}
+{%- when "math" -%}{%- assign collection = site.math -%}
+{%- endcase -%}
+
 <div class="contents">
   {% include post-title.html %}
   <ol>
-    {%- assign contents = site.cs | where: "subcategory", page.subcategory -%}
+    {%- assign contents = collection | where: "subcategory", page.subcategory -%}
     {%- for content in contents -%}
       {%- if content.title != page.title -%}
         <li><a href={{content.url}} class="contents-content">{{content.title}}</a></li>
