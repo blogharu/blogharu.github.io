@@ -15,7 +15,7 @@ layout: null
     {% for post in collection %}
       <url>
         <loc>{{ site.url }}{{ post.url }}</loc>
-        <lastmod>{{ post.upload | date_to_xmlschema }}</lastmod>
+        <lastmod>{{ post.upload }}</lastmod>
 
         {% if post.sitemap.changefreq == null %}
           <changefreq>weekly</changefreq>
