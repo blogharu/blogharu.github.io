@@ -21,6 +21,7 @@ nav{
 }
 
 .header-nav-categories{
+  display: inline;
   width: 400px;
 }
 
@@ -29,6 +30,20 @@ nav{
 }
 
 .header-nav-categories a{
+  align-self: center;
+  margin: 1rem;
+}
+
+.header-nav-others {
+  display: inline;
+  width: 200px;
+}
+
+.header-nav-others div{
+  float: right;
+}
+
+.header-nav-others a{
   align-self: center;
   margin: 1rem;
 }

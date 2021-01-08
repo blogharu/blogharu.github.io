@@ -1,0 +1,44 @@
+<div class="index-recently">
+  <div class="index-recently-cs">
+    <h3 class="index-recently-title">최신글</h3>
+    <div class="index-recently-posts">
+      {%- assign posts = site.cs | site.math | site.music | sort: "upload" -%}
+      {%- assign prev = null -%}
+      {%- for post in site.cs reversed limit: 10 -%}
+        {%- if post.upload -%}
+          {%- if post.upload != prev -%}
+            {%- assign prev = post.upload -%}
+            <h5 class="index-recently-post-date">{{post.upload}}</h5>
+          {%- endif -%}
+          <div class="index-recently-post">
+            <div>
+              <div class="index-recently-post-category">
+                [<a href="{{post.category}}"> {{post.category | upcase}}</a> / <a href="{{post.category}}/{{post.subcategory}}">{{post.subcategory}}</a> ]
+              </div>
+              <div class="index-recently-post-title">
+                <a href="{{post.url}}"> {{post.title}} </a>
+              </div>
+            </div>
+          </div>
+          <!--
+          <div class="index-recently-post">
+            {%- if post.thumbnail -%}
+              <a href="{{post.url}}">
+              <img class="index-recently-post-img-title" src="/assets/images/{{post.category}}/{{post.subcategory}}/{{post.page}}/01-title.png" width="156" height="88">
+              </a>
+            {%- endif -%}
+              <a href="{{post.url}}"> {{post.title}} </a>
+              <br>
+          </div>
+          {%- capture count -%}{%- increment -%}{%- endcapture -%}
+          {%- if count == 2 -%}
+            {%- break -%}
+          {%- endif -%}
+          -->
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+
+
+</div>

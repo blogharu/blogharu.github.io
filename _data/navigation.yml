@@ -1,8 +1,19 @@
+
+- # Categories on left side of navigation
+  - name: CS
+    link: /cs
+#  - name: Math
+#    link: /mth
+#  - name: Music
+#    link: /mus
+-
+  - name: About
+    link: /about
 #- name: Math
 #  link: /math.html
 #- name: Contect
 #  link: /contect.html
 #- name: About
 #  link: /about.html
-- name: CS
-  link: /cs.html
+#- name: CS
+#  link: /cs

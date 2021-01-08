@@ -1,0 +1,51 @@
+.index-recently {
+  width: 500px;
+  margin: auto;
+}
+
+.index-recently-post-date{
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+.index-recently-post{
+  margin-bottom: 8px;
+  margin-left: 8px;
+}
+.index-recently-post-category {
+  display: inline-block;
+}
+
+.index-recently-post-title {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.index-recently-posts{
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+/* If you want to use img
+
+.index-recently-post-img-title{
+//  width:100%;
+}
+
+
+.index-recently-post{
+  width: 156px;
+  margin-left: 2px;
+  margin-right: 2px;
+  display: inline;
+  float: left;
+}
+*/
+.index-recently-title{
+  margin: 0px;
+  padding-left: 8px;
+  padding-bottom: 8px;
+  height: 38px;
+  border-bottom: 1px solid black;
+  margin-bottom: 12px;
+}

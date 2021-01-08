@@ -1,5 +1,4 @@
-* { -ms-user-select: none; -moz-user-select: -moz-none; -khtml-user-select: none; -webkit-user-select: none; user-select: none; }
-
+/* { -ms-user-select: none; -moz-user-select: -moz-none; -khtml-user-select: none; -webkit-user-select: none; user-select: none; } */
 .warp { width: 600px; margin: auto; }
 
 .content { overflow: hidden; margin-left: 16px; margin-right: 16px; height: auto; }
@@ -26,19 +25,40 @@ p { font-size: 16px; }
 
 pre { font-size: 16px; }
 
+footer { margin-top: 5px; }
+
 header { height: 190px; margin-bottom: 5px; border-bottom: 1px solid black; }
 
 .header-title { padding-top: 8px; text-align: center; height: auto; }
 
 nav { border-bottom: 1px solid black; padding-bottom: 8px; }
 
-.header-nav-categories { width: 400px; }
+.header-nav-categories { display: inline; width: 400px; }
 
 .header-nav-categories div { float: left; }
 
 .header-nav-categories a { align-self: center; margin: 1rem; }
 
-footer { margin-top: 5px; }
+.header-nav-others { display: inline; width: 200px; }
+
+.header-nav-others div { float: right; }
+
+.header-nav-others a { align-self: center; margin: 1rem; }
+
+.index-recently { width: 500px; margin: auto; }
+
+.index-recently-post-date { margin-top: 0px; margin-bottom: 8px; }
+
+.index-recently-post { margin-bottom: 8px; margin-left: 8px; }
+
+.index-recently-post-category { display: inline-block; }
+
+.index-recently-post-title { display: inline-block; padding-left: 10px; }
+
+.index-recently-posts { margin-left: 8px; margin-right: 8px; }
+
+/* If you want to use img .index-recently-post-img-title{ //  width:100%; } .index-recently-post{ width: 156px; margin-left: 2px; margin-right: 2px; display: inline; float: left; } */
+.index-recently-title { margin: 0px; padding-left: 8px; padding-bottom: 8px; height: 38px; border-bottom: 1px solid black; margin-bottom: 12px; }
 
 .post-nav { border-top: 1px solid black; padding-top: 4px; }
 

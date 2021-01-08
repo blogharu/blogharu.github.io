@@ -1,9 +1,19 @@
 <nav>
   <div class="header-nav-categories">
-    {%- for item in site.data.navigation -%}
+    {%- for category in site.data.navigation[0] -%}
     <div>
-    <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
-      {{ item.name }}
+    <a href="{{ category.link }}" {% if page.url == category.link %}class="current"{% endif %}>
+      {{ category.name }}
+    </a>
+    </div>
+    {%- endfor -%}
+  </div>
+  
+  <div class="header-nav-others">
+    {%- for other in site.data.navigation[1] -%}
+    <div>
+    <a href="{{ other.link }}" {% if page.url == other.link %}class="current"{% endif %}>
+      {{ other.name }}
     </a>
     </div>
     {%- endfor -%}
