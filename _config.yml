@@ -17,6 +17,15 @@ collections:
   music:
     output: false
 
+# default variables
+defaults:
+ - scope:
+    path: ""
+    type: "cs"
+   values:
+    hi: hi
+
+
 # plugins
 plugins:
   - jekyll-seo-tag

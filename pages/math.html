@@ -3,4 +3,16 @@ layout: default
 permalink: /math
 title: Math Categories
 category: math
+test:
+ - a
+ - b
+ - c
 ---
+
+{{page.test[1]}}
+<!--
+{%- for page in site.posts reversed-%}
+  {{page}}
+  hi
+{%- endfor -%}
+-->

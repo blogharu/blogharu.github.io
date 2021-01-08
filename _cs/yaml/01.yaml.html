@@ -1,0 +1,82 @@
+---
+layout: post
+category: cs
+subcategory: yml
+title: 공부하자 yaml, yml
+upload: 2021-01-08
+page: 1
+---
+
+데이터 직렬화 Data Serialization
+
+데이터 직렬화는 복잡한 데이터 구조를 바이트 스트림으로 바꾸는 프로세스다.
+
+
+
+바이트 스트림으로 바뀐 데이터는 저장, 전송 등등에 쓰인다.
+
+이해를 돕기위해 예를 들자면 다음 그림과 같이 복잡한 클레스를
+
+
+
+다음과 같은 데이터 스트럭처가 있다고 생각해보자.
+
+
+
+YAML Ain't Markup Language
+
+YAML 은 데이터 직렬화 언어입니다.
+읽기 쉽게 하기 위한 언어!
+
+YAML 의 기본 특징
+1. YAML 은 대/소문자를 구분합니다.
+2. tab키로 뛰는걸 허용하지 않습니다. 스페이스는 가능합니다.
+
+# comments
+
+{name: "name", age: 22} # object
+object:
+  string: "string1", 'string2'
+  integer: 23
+  float: 3.5
+  float: 1e+10
+  bool: true
+  date: 1994-02-06 14:33:22 #ISO 8601 방식 이용
+  null: null
+
+# list1 == list2
+list1:
+  - ele1
+  - ele2
+list2: [ele1, ele2]
+
+# list of objects
+liatObjects:
+  - name: "name1"
+    age: 1
+  - {name: "name2", age: 2}
+  -
+    name: "name3"
+    age: 3
+
+# string1 == string2
+string1: "very very long string"
+string2: >
+  very very
+  long string
+
+# string with newline
+string: |
+  name is paul
+  hi my friends
+
+# 변수 만들고 활용하기 string1 == string2
+
+string1: &var1 "string"
+string2: *var1
+
+# type casting
+
+!!str
+
+int?: !!float 3 # float type이 된다

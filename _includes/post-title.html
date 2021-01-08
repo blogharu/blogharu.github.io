@@ -1,4 +1,12 @@
 <h3 class="post-title">{{page.page}}. {{page.title}}</h3>
-{%- if page.page > 0-%}
-<img class="post-img-title" src="/assets/images/{{page.category}}/{{page.subcategory}}/{{page.page}}/01-title.png">
+{%- if page.thumbnail -%}
+  <img class="post-img-title" src="/assets/images/{{page.category}}/{{page.subcategory}}/{{page.page}}/01-title.png">
 {%- endif -%}
+<!-- If there is a title image, then create img
+{%- for img in site.static_files -%}
+  {%- capture img_path -%}/assets/images/{{page.category}}/{{page.subcategory}}/{{page.page}}/01-title.png {%- endcapture -%}
+  {%- if img.path == img_path -%}
+    <img class="post-img-title" src={{img_path}}>
+  {%- endif -%}
+{%- endfor -%}
+-->
