@@ -2,7 +2,7 @@
 # site variables. site.var
 
 title: "공부하는 하루"
-subtitle: "컴퓨터를 공부해보자"
+subtitle: "매일매일 조금씩 공부해보자"
 email: "blogharu@gmail.com"
 baseurl: ""
 url: "https://blogharu.github.io"
