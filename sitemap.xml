@@ -1,34 +1,20 @@
 ---
-layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  {% for category in site.data.categories %}
-
+  {%- for category in site.data.categories -%}
     {%- case category.name -%}
     {%- when "cs" -%}{%- assign collection = site.cs -%}
     {%- when "math" -%}{%- assign collection = site.math -%}
     {%- when "music" -%}{%- assign collection = site.math -%}
     {%- endcase -%}
-
-    {% for post in collection %}
-      <url>
-        <loc>{{ site.url }}{{ post.url }}</loc>
-        <lastmod>{{ post.upload }}</lastmod>
-
-        {% if post.sitemap.changefreq == null %}
-          <changefreq>weekly</changefreq>
-        {% else %}
-          <changefreq>{{ post.sitemap.changefreq }}</changefreq>
-        {% endif %}
-
-        {% if post.sitemap.priority == null %}
-            <priority>0.5</priority>
-        {% else %}
-          <priority>{{ post.sitemap.priority }}</priority>
-        {% endif %}
-      </url>
-    {% endfor %}
+    {%for post in collection%}
+    <url>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      <lastmod>{{ post.upload }}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    {%-endfor-%}
   {% endfor %}
 </urlset>
