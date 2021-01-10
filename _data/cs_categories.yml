@@ -3,6 +3,9 @@
 #    - css
 #    - html
     - jekyll
+- category: 개발 도구
+  sub_categories:
+    - atom
 #- category: 프로그래밍 언어
 #  sub_categories:
 #    - python

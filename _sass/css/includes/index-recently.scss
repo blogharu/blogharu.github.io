@@ -36,9 +36,11 @@
 }
 
 .index-recently-post-detail{
+  width: 270px;
   height: 150px;
   margin-left: 8px;
   display: inline-block;
+  overflow: auto;
 }
 
 .index-recently-post-detail div{

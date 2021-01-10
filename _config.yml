@@ -7,8 +7,9 @@ email: "blogharu@gmail.com"
 baseurl: ""
 url: "https://blogharu.github.io"
 
-# site collections
+# settings
 
+# site collections
 collections:
   cs:
     output: true

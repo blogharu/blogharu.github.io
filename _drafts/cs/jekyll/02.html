@@ -1,0 +1,65 @@
+---
+layout: post
+category: cs
+subcategory: jekyll
+title: jekyll 설치
+upload: 2021-01-03
+page: 2
+thumbnail: true
+---
+<pre>
+jekyll을 설치해보도록 하겠습니다. 저는 다음 2가지 운영체제를 기준으로 설명하겠습니다.
+  <a href="#window">1. Windows 10</a>
+  <a href="#">2. Ubuntu 20.04</a>
+제가 macOS가 없어서 mac은 소개하지 않는 점 양해 부탁드립니다.
+</pre>
+<h3 id="window">1. Windows 10 에서 jekyll 설치</h3>
+<pre>
+
+</pre>
+<h3 id="ubuntu">2. Ubuntu 20.04 에서 jekyll 설치</h3>
+<h3 id="mac">3. Mac 에서 jekyll 설치</h3>
+
+{% highlight ruby linenos %}
+gem install jekyll bundler
+jekyll new myblog
+cd myblog
+bundle exec jekyll serve
+{% endhighlight %}
+
+<pre>
+위 코드에서 2번째 줄의 jekyll new myblog 는 myblog 라는 폴더에 기본적인 jekyll 사이트를 만들어 주는 코드입니다. myblog 폴더에 들어가 보면 많은 폴더와 파일들이 있는데 각각이 어떤 역할을 하는지 알아보도록 하겠습니다. 완벽한 이해보다는 대충 이런 역할을 하는구나 하고 넘어가시면 되겠습니다.
+</pre>
+<hr>
+
+<h3> 생성된 파일 </h3>
+<img src="/assets/images/cs/jekyll/2/02-files.png" width="500px">
+<pre>
+<b>* 생성된 파일은 jekyll 버전에 따라 다를 수 있습니다. *</b>
+
+우선 폴더부터 알아보도록 하겠습니다. 폴더는 _posts 와 _site 폴더 두 개가 존재합니다.
+
+<b>_posts 폴더</b>
+
+_posts 폴더는 블로그에 포스팅될 글들이 저장되는 공간입니다.
+글은 html 또는 markdown(.md) 파일 형태를 지원합니다.
+각각의 글들은 "YYYY-MM-DD-제목.확장자"의 형태를 취해야 합니다.
+
+ex) 2020-12-25-hello-world.md
+
+<b>_sites 폴더</b>
+
+_sites 폴더는 jekyll로 웹사이트를 빌드할 때 생성된 html 파일들이 저장된 위치입니다.
+
+다음은 파일을 알아보도록 하겠습니다. jekyll을 사용하기 위하여 알아야 할 파일은 _config.yml 파일과 Gemfile입니다.
+
+<b>_config.yml 파일</b>
+
+_config.yml 파일은 다양한 기능을 수행합니다. site 변수 지정, 테마 설정, collection 설정, 플러그인 설정 등등의 일을 합니다. _config.yml 파일을 수정할 시에 서버를 재실행해야 변경 사항이 반영됩니다.
+
+<b>Gemfile</b>
+
+Gemfile은 ruby를 통하여 사용할 라이브러리를 설정하는 장소입니다. 우리는 jekyll을 기본적으로 사용할 것이며 플러그인, 테마 등등의 기능을 추가할 때에 사용할 것입니다. 이 파일을 수정할 시에 bundle update를 해주서야 합니다.
+
+이로써 기본적인 jekyll의 구조를 알아보았습니다.
+</pre>
