@@ -4,22 +4,36 @@
 }
 
 .post-nav-prev{
+  display: inline-block;
   float: left;
-  width: 235px;
+  width: 230px;
+  height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .post-nav-contents{
-  width:30px;
-  display: inline;
+  width:40px;
+  height: 24px;
+  display: inline-block;
   text-align: center;
 }
 
 .post-nav-next{
+  display: inline-block;
   float: right;
-  width: 235px;
+  width: 230px;
+  height: 24px;
   text-align: right;
 }
-
+.post-nav-title{
+  overflow: hidden;
+  width: 200px;
+//  text-overflow: ellipsis;
+}
+.post-nav-arrow{
+  width: 14px;
+}
 .post-nav p{
   margin: 0px;
   opacity: 0;

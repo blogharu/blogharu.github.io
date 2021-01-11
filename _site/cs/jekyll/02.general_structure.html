@@ -39,11 +39,11 @@
 <meta property="og:url" content="https://blogharu.github.io/cs/jekyll/02.general_structure.html" />
 <meta property="og:site_name" content="공부하는 하루" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-01-11T06:50:13+09:00" />
+<meta property="article:published_time" content="2021-01-11T14:11:19+09:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="jekyll의 기본 구조" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"jekyll의 기본 구조","dateModified":"2021-01-11T06:50:13+09:00","url":"https://blogharu.github.io/cs/jekyll/02.general_structure.html","datePublished":"2021-01-11T06:50:13+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogharu.github.io/cs/jekyll/02.general_structure.html"},"description":"개요","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"jekyll의 기본 구조","dateModified":"2021-01-11T14:11:19+09:00","url":"https://blogharu.github.io/cs/jekyll/02.general_structure.html","datePublished":"2021-01-11T14:11:19+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogharu.github.io/cs/jekyll/02.general_structure.html"},"description":"개요","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -87,10 +87,7 @@
       <h3>개요</h3>
 
 <pre>
-이 페이지에 오셨다면 여러분은 성공적으로 jekyll을 설치하셨다는
-뜻이겠죠? 축하드립니다! 오늘은 저번 글에서 실행한 코드로 생성
-된 웹페이지의 구조를 보면서 jekyll이 어떤 식으로 사이트를 생
-성하는지 알아보도록 하겠습니다.
+이 페이지에 오셨다면 여러분은 성공적으로 jekyll을 설치하셨다는 뜻이겠죠? 축하드립니다! 오늘은 저번 글에서 실행한 코드로 생성된 웹페이지의 구조를 보면서 jekyll이 어떤 식으로 사이트를 생성하는지 알아보도록 하겠습니다.
 </pre>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
@@ -104,12 +101,7 @@
 </pre></td></tr></tbody></table></code></pre></figure>
 
 <pre>
-위 코드는 지난 글의 준비물에 있던 코드입니다. 여기서 2번째 줄
-의 jekyll new myblog 는 myblog 라는 폴더를 만들고 여기에
-기본적인 jekyll 사이트를 만들어 주는 코드입니다. myblog 폴
-더에 들어가 보면 많은 폴더와 파일들이 있는데 각각이 어떤 역할
-을 하는지 알아보도록 하겠습니다. 완벽한 이해보다는 대충 이런
-역할을 하는구나 하고 넘어가시면 되겠습니다.
+위 코드는 지난 글의 준비물에 있던 코드입니다. 여기서 2번째 줄의 jekyll new myblog 는 myblog 라는 폴더를 만들고 여기에 기본적인 jekyll 사이트를 만들어 주는 코드입니다. myblog 폴더에 들어가 보면 많은 폴더와 파일들이 있는데 각각이 어떤 역할을 하는지 알아보도록 하겠습니다. 완벽한 이해보다는 대충 이런 역할을 하는구나 하고 넘어가시면 되겠습니다.
 </pre>
 
 <hr>
@@ -119,22 +111,17 @@
 <img src="/assets/images/cs/jekyll/2/02-files.png" width="500px">
 
 <pre>
-우선 폴더부터 알아보도록 하겠습니다. 폴더는 _posts 와 _site
-폴더 두 개가 존재합니다.
+우선 폴더부터 알아보도록 하겠습니다. 폴더는 _posts 와 _site 폴더 두 개가 존재합니다.
 
 <b>_posts 폴더</b>
 
-_posts 폴더는 웹사이트에 포스팅될 글들이 저장되는 공간입니다.
-글은 html 또는 markdown(.md) 파일 형태를 지원합니다.
-각각의 글들은 "YYYY-MM-DD-제목.확장자"의 형태를 취해야 합니
-다.
+_posts 폴더는 웹사이트에 포스팅될 글들이 저장되는 공간입니다. 글은 html 또는 markdown(.md) 파일 형태를 지원합니다. 각각의 글들은 "YYYY-MM-DD-제목.확장자"의 형태를 취해야 합니다.
 
 ex) 2020-12-25-hello-world.md
 
 <b>_sites 폴더</b>
 
-_sites 폴더는 jekyll로 생성된 웹사이트가 저장되는 폴더입니
-다.
+_sites 폴더는 jekyll로 생성된 웹사이트가 저장되는 폴더입니다.
 </pre>
 
 <hr>
@@ -142,30 +129,28 @@ _sites 폴더는 jekyll로 생성된 웹사이트가 저장되는 폴더입니
 <h3>생성된 파일</h3>
 
 <pre>
-다음은 파일을 알아보도록 하겠습니다. jekyll을 사용하기 위하여
-알아야 할 파일은 _config.yml 파일과 Gemfile입니다.
+다음은 파일을 알아보도록 하겠습니다. jekyll을 사용하기 위하여 알아야 할 파일은 _config.yml 파일과 Gemfile입니다.
 
 <b>_config.yml 파일</b>
 
-_config.yml 파일은 다양한 기능을 수행합니다. site 변수 지
-정, 테마 설정, collection 설정, 플러그인 설정 등등의 일을
-합니다. _config.yml 파일을 수정할 시에 서버를 재실행해야 변
-경 사항이 반영됩니다.
+_config.yml 파일은 다양한 기능을 수행합니다. site 변수 지정, 테마 설정, collection 설정, 플러그인 설정 등등의 일을 합니다. _config.yml 파일을 수정할 시에 서버를 재실행해야 변경 사항이 반영됩니다.
 
 <b>Gemfile</b>
 
-Gemfile은 ruby를 통하여 사용할 라이브러리를 설정하는 장소입니다. 우리는 jekyll을 기본적으로 사용할 것이며 플러그인, 테마 등등의 기능을 추가할 때에 사용할 것입니다. 이 파일을 수정할 시에 bundle update를 해주서야 합니다.
+jekyll은 ruby의 서드파티 라이브러리입니다. 그리고 Gemfile은 ruby의 서드파티 라이브러리를 효과적으로 관리하기 위한 파일입니다. Gemfile에 웹사이트에서 사용할 ruby 라이브러리인 jekyll, 플러그인, 테마 등등을 기록함으로 우리는 어디서든 ruby가 설치된 컴퓨터에서 효과적으로 웹사이트를 관리하고 업데이트할 수 있게 됩니다. 만약 이 파일에 새로운 플러그인을 기록하면 bundle install을 통해서 플러그인을 설치해야 합니다.
 
-이로써 기본적인 jekyll의 구조를 알아보았습니다.
+지금까지 기본적인 jekyll의 구조를 알아보았습니다.
 </pre>
 
     </div>
   </div>
-  <div class="post-nav"><div class="post-nav-prev"><a href="/cs/jekyll/01.introduction.html"> < 1. jekyll 소개 </a></div>
+  <div class="post-nav"><div class="post-nav-prev"><a href="/cs/jekyll/01.introduction.html"> < </a>
+    <a href="/cs/jekyll/01.introduction.html"> < 1. jekyll 소개 </a></div>
   <div class="post-nav-contents">
     <a href="/cs/jekyll">목차</a>
   </div>
-  <div class="post-nav-next"><p>무</p></div>
+  <div class="post-nav-next"><a class="post-nav-title" href="/cs/jekyll/03.html"> 3. jekyll 시작하기</a>
+    <a class="post-nav-arrow" href="/cs/jekyll/03.html"> > </a></div>
 </div>
 
 </div>

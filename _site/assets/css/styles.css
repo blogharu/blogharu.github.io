@@ -67,11 +67,15 @@ nav { border-bottom: 1px solid black; padding-bottom: 8px; }
 /* If you want to use img .index-recently-post-img-title{ //  width:100%; } .index-recently-post{ width: 156px; margin-left: 2px; margin-right: 2px; display: inline; float: left; } */
 .post-nav { border-top: 1px solid black; padding-top: 4px; }
 
-.post-nav-prev { float: left; width: 235px; }
+.post-nav-prev { display: inline-block; float: left; width: 230px; height: 24px; overflow: hidden; text-overflow: ellipsis; }
 
-.post-nav-contents { width: 30px; display: inline; text-align: center; }
+.post-nav-contents { width: 40px; height: 24px; display: inline-block; text-align: center; }
 
-.post-nav-next { float: right; width: 235px; text-align: right; }
+.post-nav-next { display: inline-block; float: right; width: 230px; height: 24px; text-align: right; }
+
+.post-nav-title { overflow: hidden; width: 200px; }
+
+.post-nav-arrow { width: 14px; }
 
 .post-nav p { margin: 0px; opacity: 0; }
 
@@ -420,7 +424,7 @@ pre .il { color: #40a070; }
 .highlight pre .s { color: #CC3300; }
 
 /* Literal.String */
-.highlight pre .na { color: #330099; }
+.highlight pre .na { color: #D19A66; }
 
 /* Name.Attribute */
 .highlight pre .nb { color: #336666; }
@@ -450,7 +454,7 @@ pre .il { color: #40a070; }
 .highlight pre .nn { color: #00CCFF; font-weight: bold; }
 
 /* Name.Namespace */
-.highlight pre .nt { color: #330099; font-weight: bold; }
+.highlight pre .nt { color: #018A56; font-weight: bold; }
 
 /* Name.Tag */
 .highlight pre .nv { color: #003333; }

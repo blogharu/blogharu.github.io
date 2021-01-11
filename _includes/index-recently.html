@@ -2,8 +2,8 @@
   <div class="index-recently-cs">
     <h3 class="index-recently-title">최신글</h3>
     <div class="index-recently-posts">
-      {%- assign posts = site.cs | site.math | site.music | sort: "upload" -%}
-      {%- for post in posts reversed limit: 10 -%}
+      {%- assign posts = site.cs | site.math | site.music | sort: "upload" | reverse -%}
+      {%- for post in posts -%}
         {%- if post.upload -%}
           {%- if post.thumbnail -%}
             <div class="index-recently-post">
@@ -20,6 +20,10 @@
                 </div>
               </div>
             </div>
+            {%- capture count -%}{%- increment -%}{%- endcapture -%}
+            {%- if count == '4' -%}
+              {%- break -%}
+            {%- endif -%}
           {%- endif -%}
         {%- endif -%}
       {%- endfor -%}

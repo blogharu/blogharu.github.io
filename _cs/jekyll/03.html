@@ -1,0 +1,111 @@
+---
+layout: post
+category: cs
+subcategory: jekyll
+title: jekyll 시작하기
+upload: 2021-01-11
+page: 3
+thumbnail: true
+---
+<h3>개요</h3>
+
+<pre>
+이제 본격적으로 jekyll을 이용하여 정적 웹사이트를 만들어 보도록 하겠습니다. 이 글에서 저희가 할 일은 다음과 같습니다.
+
+<a href="#1">  1. Gemfile 생성</a>
+<a href="#2">  2. 기초적인 사이트 생성</a>
+<a href="#3">  3. jekyll로 사이트 생성</a>
+</pre>
+
+<h3 id="1">1. Gemfile 생성</h3>
+
+<pre>
+Gemfile은 필수는 아니지만 우리가 만든 정적 웹사이트를 다른 컴퓨터에서도 쉽게 관리하기 위하여 필요합니다. cmd 또는 terminal을 실행합니다. jekyll을 이용하여 웹사이트 작업을 하실 폴더로 이동합니다. 이 폴더를 루트 폴더라고 부르겠습니다. 아래 코드를 입력합니다. 만약 실행되지 않는다면 gem install bundler를 먼저 입력 합니다. 관리자 권한이 필요할 수 있습니다.
+</pre>
+
+{% highlight shell_session linenos%}
+bundle init
+{% endhighlight %}
+
+<pre>
+이 코드는 여러분의 폴더에 Gemfile을 생성합니다. 아래 그림은 생성된 Gemfilie을 text editor로 연 그림입니다. 저는 text editor로 atom을 사용하였습니다.
+</pre>
+
+<img width="500px" src="/assets/images/{{page.category}}/{{page.subcategory}}/{{page.page}}/
+02-gemfile-init.png
+">
+
+<pre>
+7번줄인 # gem "rails" 아래에 gem jekyll 을 입력하고 저장합니다. 이는 우리의 정적 웹사이트가 jekyll을 사용한다고 기록하는 작업입니다.
+</pre>
+
+<img width="500px" src="/assets/images/{{page.category}}/{{page.subcategory}}/{{page.page}}/
+03-gemfile-add-jekyll.png
+">
+
+<pre>
+cmd 또는 terminal에서 다음을 입력해서 jekyll을 설치합니다.
+</pre>
+
+{% highlight shell_session linenos%}
+bundle install
+{% endhighlight %}
+
+<pre>
+루트 폴더에 Gemfile.lock 파일이 생성되었성습니다. 이 파일은 우리가 설치한 라이브러리의 버전을 기록하고 있는 파일입니다. 우리가 다른 컴퓨터에서 작업할 때 bundle install 을 입력하게 되면 Gemfile.lock 파일에 적힌 버전으로 라이브러리를 설치하기 때문에 우리는 지금과 동일한 환경에서 작업이 가능하게 됩니다.
+</pre>
+
+<h3 id="2">기초적인 사이트 생성</h3>
+
+<pre>
+간단한 사이트를 생성하겠습니다. jekyll 공식 사이트에서 제시하는 간단한 사이트를 이용하도록 하겠습니다. 루트 폴더에 index.html 파일을 만들고 아래의 코드를 붙여넣겠습니다.
+</pre>
+
+{% highlight html linenos%}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+  </body>
+</html>
+{% endhighlight %}
+
+<pre>
+비록 index 페이지뿐이지만 jekyll을 실행해 보는데는 충분한 사이트가 만들어 졌습니다.
+</pre>
+
+<h3 id="3">jekyll로 사이트 생성</h3>
+
+<pre>
+이제 jekyll을 이용하여 정적 사이트를 만들어 보겠습니다. 아래 코드를 cmd 또는 terminal에 입력합니다.
+</pre>
+
+{% highlight shell_session linenos%}
+bundle exec jekyll serve
+{% endhighlight %}
+
+<pre>
+웹브라우저를 켜고 localhost:4000 을 주소창에 입력하면 우리 만든 사이트를 확인 할 수 있습니다. 아래는 웹브라우저에서 본 사이트 입니다.
+</pre>
+
+<img width="500px" src="/assets/images/{{page.category}}/{{page.subcategory}}/{{page.page}}/
+04-index.html.png
+">
+
+<pre>
+루트 폴더를 보시면 _site 폴더가 생성되고 여기에 index.html과 동일한 파일이 생김을 확인 할 수 있습니다.
+</pre>
+
+<h3>TMI 몰라도 되는 내용</h3>
+
+{% highlight shell_session linenos%}
+bundle exec jekyll serve
+{% endhighlight %}
+
+<pre>
+위의 코드는 bundle exec 와 jekyll serve 가 합쳐진 코드입니다. bundle exec 는 Gemfile에 설정된 버전으로 ruby를 세팅하는 과정이라고 생각하시면 됩니다. jekyll serve 는 정적 사이트를 생성 후 localhost:4000 에서 사이트를 볼 수 있게 해줍니다. 한번 bundle exec 로 ruby를 세팅하면 jekyll serve 만 입력하셔도 괜찮습니다.
+</pre>
