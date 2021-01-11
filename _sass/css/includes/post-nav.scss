@@ -6,7 +6,7 @@
 .post-nav-prev{
   display: inline-block;
   float: left;
-  width: 230px;
+  width: 262px;
   height: 24px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -22,17 +22,31 @@
 .post-nav-next{
   display: inline-block;
   float: right;
-  width: 230px;
+  width: 262px;
   height: 24px;
   text-align: right;
 }
+
+.post-nav-next div{
+  float: right;
+}
+
 .post-nav-title{
+  display: inline-block;
   overflow: hidden;
-  width: 200px;
-//  text-overflow: ellipsis;
+  width: 220px;
+  height: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .post-nav-arrow{
-  width: 14px;
+  display: inline-block;
+  width: 8px;
+  margin-left: 2px;
+  margin-right: 2px;
+  height: 24px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .post-nav p{
   margin: 0px;

@@ -67,15 +67,17 @@ nav { border-bottom: 1px solid black; padding-bottom: 8px; }
 /* If you want to use img .index-recently-post-img-title{ //  width:100%; } .index-recently-post{ width: 156px; margin-left: 2px; margin-right: 2px; display: inline; float: left; } */
 .post-nav { border-top: 1px solid black; padding-top: 4px; }
 
-.post-nav-prev { display: inline-block; float: left; width: 230px; height: 24px; overflow: hidden; text-overflow: ellipsis; }
+.post-nav-prev { display: inline-block; float: left; width: 262px; height: 24px; overflow: hidden; text-overflow: ellipsis; }
 
 .post-nav-contents { width: 40px; height: 24px; display: inline-block; text-align: center; }
 
-.post-nav-next { display: inline-block; float: right; width: 230px; height: 24px; text-align: right; }
+.post-nav-next { display: inline-block; float: right; width: 262px; height: 24px; text-align: right; }
 
-.post-nav-title { overflow: hidden; width: 200px; }
+.post-nav-next div { float: right; }
 
-.post-nav-arrow { width: 14px; }
+.post-nav-title { display: inline-block; overflow: hidden; width: 220px; height: 24px; text-overflow: ellipsis; white-space: nowrap; }
+
+.post-nav-arrow { display: inline-block; width: 8px; margin-left: 2px; margin-right: 2px; height: 24px; overflow: hidden; white-space: nowrap; }
 
 .post-nav p { margin: 0px; opacity: 0; }
 

@@ -7,28 +7,59 @@ email: "blogharu@gmail.com"
 baseurl: ""
 url: "https://blogharu.github.io"
 
+# plugins
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+
+
 # settings
 
 # site collections
 collections:
   cs:
     output: true
-  math:
+  mth:
     output: false
-  music:
+  mus:
     output: false
 
 # default variables
 defaults:
- - scope:
-    path: ""
-    type: "cs"
-   values:
-    hi: hi
+  # Set Category
+  - scope:
+      path: ""
+      type: "cs"
+    values:
+      category: "cs"
+      layout: "post"
+  - scope:
+      path: ""
+      type: "mth"
+    values:
+      category: "mth"
+  - scope:
+      path: ""
+      type: "mus"
+    values:
+      category: "mus"
 
-
-# plugins
-plugins:
-  - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-sitemap
+  # Set Subcategory
+  - scope:
+      path: "_cs/atom"
+    values:
+      subcategory: "atom"
+  - scope:
+      path: "_cs/general"
+    values:
+      subcategory: "general"
+  - scope:
+      path: "_cs/jekyll"
+    values:
+      subcategory: "jekyll"
+  - scope:
+      path: "_cs/yaml"
+    values:
+      subcategory: "yaml"

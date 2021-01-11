@@ -3,8 +3,11 @@
   <div class="post-nav-prev">
     {%- assign index = page.page | minus:1 -%}
     {%- if index > 0 -%}
-    <a href="{{contents[index].url}}"> < </a>
-    <a href="{{contents[index].url}}"> < {{contents[index].page}}. {{contents[index].title}} </a>
+    <div class="post-nav-arrow"><이전
+    </div>
+    <div class="post-nav-title">
+      <a href="{{contents[index].url}}">{{contents[index].page}}. {{contents[index].title}} </a>
+    </div>
     {%- else -%}
     <p>None</p>
     {%- endif -%}
@@ -15,8 +18,10 @@
   <div class="post-nav-next">
     {%- assign index = page.page | plus:1 -%}
     {%- if contents[index] -%}
-    <a class="post-nav-title" href="{{contents[index].url}}"> {{contents[index].page}}. {{contents[index].title}}</a>
-    <a class="post-nav-arrow" href="{{contents[index].url}}"> > </a>
+    <div class="post-nav-arrow">>다음</div>
+    <div class="post-nav-title">
+      <a href="{{contents[index].url}}"> {{contents[index].page}}. {{contents[index].title}} </a>
+    </div>
     {%- else -%}
     <p>None</p>
     {%- endif -%}
