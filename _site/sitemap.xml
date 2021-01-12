@@ -1,72 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://blogharu.github.io/cs/atom</loc>
-<lastmod>2021-01-12T11:03:46+09:00</lastmod>
-</url>
-<url>
-<loc>https://blogharu.github.io/cs/atom/01.introduction.html</loc>
-<lastmod>2021-01-12T11:03:46+09:00</lastmod>
-</url>
-<url>
-<loc>https://blogharu.github.io/cs/atom/02.scroll_past_end.html</loc>
-<lastmod>2021-01-12T11:03:46+09:00</lastmod>
-</url>
-<url>
-<loc>https://blogharu.github.io/cs/atom/03.remove_welcome_screen.html</loc>
-<lastmod>2021-01-12T11:03:46+09:00</lastmod>
-</url>
-<url>
-<loc>https://blogharu.github.io/cs/atom/04.remove_telemetry_consent_screen.html</loc>
-<lastmod>2021-01-12T11:03:46+09:00</lastmod>
-</url>
-<url>
-<loc>https://blogharu.github.io/cs/general</loc>
-<lastmod>2021-01-12T11:03:46+09:00</lastmod>
-</url>
-<url>
-<loc>https://blogharu.github.io/cs/general/01.data_serialization.html</loc>
-<lastmod>2021-01-12T11:03:46+09:00</lastmod>
-</url>
-<url>
-<loc>https://blogharu.github.io/cs/jekyll</loc>
-<lastmod>2021-01-12T11:03:46+09:00</lastmod>
-</url>
-<url>
-<loc>https://blogharu.github.io/cs/jekyll/01.introduction.html</loc>
-<lastmod>2021-01-12T11:03:46+09:00</lastmod>
-</url>
-<url>
-<loc>https://blogharu.github.io/cs/jekyll/02.general_structure.html</loc>
-<lastmod>2021-01-12T11:03:46+09:00</lastmod>
-</url>
-<url>
-<loc>https://blogharu.github.io/cs/jekyll/03.start.html</loc>
-<lastmod>2021-01-12T11:03:46+09:00</lastmod>
-</url>
-<url>
-<loc>https://blogharu.github.io/cs/jekyll/04.html</loc>
-<lastmod>2021-01-12T11:03:46+09:00</lastmod>
-</url>
-<url>
-<loc>https://blogharu.github.io/cs/yaml</loc>
-<lastmod>2021-01-12T11:03:46+09:00</lastmod>
-</url>
-<url>
-<loc>https://blogharu.github.io/cs/yaml/01.yaml.html</loc>
-<lastmod>2021-01-12T11:03:46+09:00</lastmod>
-</url>
-<url>
-<loc>https://blogharu.github.io/about</loc>
-</url>
-<url>
-<loc>https://blogharu.github.io/cs</loc>
-</url>
-<url>
-<loc>https://blogharu.github.io/</loc>
-</url>
-<url>
-<loc>https://blogharu.github.io/googlecc035568e16fbe3e.html</loc>
-<lastmod>2021-01-08T02:52:45+09:00</lastmod>
-</url>
+  <url>
+    <loc>https://blogharu.github.io/</loc>
+  </url>
+  <url>
+    <loc>https://blogharu.github.io/about</loc>
+  </url>
+  <url>
+    <loc>https://blogharu.github.io/cs</loc>
+  </url>
+    <url>
+      <loc>https://blogharu.github.io/cs/atom</loc></url>
+    <url>
+      <loc>https://blogharu.github.io/cs/atom/01.introduction.html</loc><lastmod>2021-01-11</lastmod></url>
+    <url>
+      <loc>https://blogharu.github.io/cs/atom/02.scroll_past_end.html</loc><lastmod>2021-01-11</lastmod></url>
+    <url>
+      <loc>https://blogharu.github.io/cs/atom/03.remove_welcome_screen.html</loc><lastmod>2021-01-11</lastmod></url>
+    <url>
+      <loc>https://blogharu.github.io/cs/atom/04.remove_telemetry_consent_screen.html</loc><lastmod>2021-01-11</lastmod></url>
+    <url>
+      <loc>https://blogharu.github.io/cs/general</loc></url>
+    <url>
+      <loc>https://blogharu.github.io/cs/general/01.data_serialization.html</loc><lastmod>2021-01-12</lastmod></url>
+    <url>
+      <loc>https://blogharu.github.io/cs/jekyll</loc></url>
+    <url>
+      <loc>https://blogharu.github.io/cs/jekyll/01.introduction.html</loc><lastmod>2021-01-02</lastmod></url>
+    <url>
+      <loc>https://blogharu.github.io/cs/jekyll/02.general_structure.html</loc><lastmod>2021-01-03</lastmod></url>
+    <url>
+      <loc>https://blogharu.github.io/cs/jekyll/03.start.html</loc><lastmod>2021-01-11</lastmod></url>
+    <url>
+      <loc>https://blogharu.github.io/cs/yaml</loc></url>
 </urlset>

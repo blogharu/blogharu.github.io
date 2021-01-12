@@ -25,7 +25,7 @@ p { font-size: 16px; }
 
 pre { font-size: 16px; }
 
-footer { margin-top: 5px; }
+footer { margin-top: 5px; height: 200px; }
 
 header { height: 190px; margin-bottom: 5px; border-bottom: 1px solid black; }
 

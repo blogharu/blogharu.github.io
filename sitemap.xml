@@ -1,0 +1,30 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://blogharu.github.io/</loc>
+  </url>
+  <url>
+    <loc>https://blogharu.github.io/about</loc>
+  </url>
+  <url>
+    <loc>https://blogharu.github.io/cs</loc>
+  </url>
+
+  {%- for category in site.data.categories -%}
+    {%- case category.name -%}
+    {%- when "cs" -%}{%- assign collection = site.cs -%}
+    {%- when "math" -%}{%- assign collection = site.math -%}
+    {%- when "music" -%}{%- assign collection = site.math -%}
+    {%- endcase -%}
+    {%for post in collection%}
+    <url>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      {%- if post.upload -%}
+      <lastmod>{{ post.upload }}</lastmod>
+      {%- endif -%}
+    </url>
+    {%-endfor-%}
+  {% endfor %}
+</urlset>
