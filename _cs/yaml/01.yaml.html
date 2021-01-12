@@ -1,90 +1,49 @@
 ---
 title: yaml 소개
-#upload: 2021-01-11
+upload: 2021-01-12
 page: 1
 thumbnail: true
 ---
-<h3>yaml이란</h3>
+<h3>yaml이란?</h3>
 
 <pre>
-yaml은 데이터 직렬화 언어이다. 데이터 직렬화 (data serialization) 이란 복잡한 데이터 구조를 바이트 스트림으로 바꾸는 절차이다. 바이트 스트림으로 바뀐 데이터는 저장, 데이터 전송등에 이용된다.
-
-쉽게  아래와 같은 복잡한 클래스를 스트링 형태로
+yaml은 YAML Ain't markup language 의 약어이고 <a href="/cs/general/01.data_serialization">데이터 직렬화</a> 언어이다. yaml은 사람 친화적이고 다른 프로그래밍 언어에서 잘 작동되게 디자인되었다.
 </pre>
 
 <h3>yaml의 특징</h3>
 
+<pre>
+  1. yaml은 대소문자를 구분한다.
+  2. 확장자로 .yaml, .yml을 사용한다.
+  <b>3. yaml은 들여쓰기할 때 tab 키를 허용하지 않는다.</b>
+</pre>
 
-데이터 직렬화 Data Serialization
+<h3>yaml 행렬</h3> list
 
-데이터 직렬화는 복잡한 데이터 구조를 바이트 스트림으로 바꾸는 프로세스다.
+<pre>
+[var1, var2, var3]
+== - var1
+   - var2
+   - var3
+</pre>
 
+<h3>yaml 오브젝트</h3> associative arrays
 
+<pre>
+{key:val, key2:val2}
+ == - key: var
+    - key2: var2
+</pre>
 
-바이트 스트림으로 바뀐 데이터는 저장, 전송 등등에 쓰인다.
+<h3>yaml 코멘트</h3>
 
-이해를 돕기위해 예를 들자면 다음 그림과 같이 복잡한 클레스를
+<pre>
+# Commnents
+</pre>
 
+<h3>참조</h3>
 
-
-다음과 같은 데이터 스트럭처가 있다고 생각해보자.
-
-
-
-YAML Ain't Markup Language
-
-YAML 은 데이터 직렬화 언어입니다.
-읽기 쉽게 하기 위한 언어!
-
-YAML 의 기본 특징
-1. YAML 은 대/소문자를 구분합니다.
-2. tab키로 뛰는걸 허용하지 않습니다. 스페이스는 가능합니다.
-
-# comments
-
-{name: "name", age: 22} # object
-object:
-  string: "string1", 'string2'
-  integer: 23
-  float: 3.5
-  float: 1e+10
-  bool: true
-  date: 1994-02-06 14:33:22 #ISO 8601 방식 이용
-  null: null
-
-# list1 == list2
-list1:
-  - ele1
-  - ele2
-list2: [ele1, ele2]
-
-# list of objects
-liatObjects:
-  - name: "name1"
-    age: 1
-  - {name: "name2", age: 2}
-  -
-    name: "name3"
-    age: 3
-
-# string1 == string2
-string1: "very very long string"
-string2: >
-  very very
-  long string
-
-# string with newline
-string: |
-  name is paul
-  hi my friends
-
-# 변수 만들고 활용하기 string1 == string2
-
-string1: &var1 "string"
-string2: *var1
-
-# type casting
-
-!!str
-
-int?: !!float 3 # float type이 된다
+<pre>
+yaml 공식 사이트 문서
+<a href="https://yaml.org/spec/1.2/spec.pdf">https://yaml.org/spec/1.2/spec.pdf</a>
+</pre>
