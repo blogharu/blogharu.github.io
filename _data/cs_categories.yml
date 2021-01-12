@@ -2,14 +2,15 @@
   sub_categories:
 #    - css
 #    - html
+    - javascript
     - jekyll
 - category: 개발 도구
   sub_categories:
     - atom
 
-- category: 데이터 직렬화 언어
-  sub_categories:
-    - yaml
+#- category: 데이터 직렬화 언어
+#  sub_categories:
+#    - yaml
 
 - category: 자유 게시판
   sub_categories:

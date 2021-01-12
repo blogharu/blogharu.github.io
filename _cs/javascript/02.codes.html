@@ -1,0 +1,137 @@
+---
+title: javascript 코드
+upload: 2021-01-13
+page: 2
+thumbnail: true
+---
+
+
+<h3>python -> javascript</h3>
+<pre>
+print(str) -> console.log(str);
+""" comments """ -> /* comments */
+# comment -> // comment
+type(val) -> typeof(val);
+
+for i in list: print(i)
+-> for (var i of list){ console.log(i); }
+
+for key in dict: print(dict[key])
+-> for (var key in dict) { console.log(dict[key]); }
+</pre>
+
+<h3>set -> set</h3>
+<pre>
+mySet = set() -> var mySet = new Set();
+set.add(ele) -> set.add(ele) ;
+set in ele -> set.has(ele) ;
+set.remove(ele) -> set.delete(ele);
+len(set) -> set.size ;
+list(set) -> Array.from(set)
+</pre>
+
+<h3>list -> array</h3>
+
+<pre>
+myList = [] -> var myArray = [];
+list.push(ele) -> array.push(ele);
+list.pop() -> array.pop();
+ele in list -> list.includes(ele);
+
+#sorting list
+
+#sort with string
+list.sort() -> array.sort()
+#sort with number
+list.sort() -> array.sort((a,b) => a - b)
+            -> array.sort(
+                 function(a,b) {
+                  return a - b ;
+                 }
+               );
+</pre>
+
+<h3>dict -> object</h3>
+<pre>
+myDict = {} -> myObject = {};
+dict[key] = val -> object[key] = val;
+dict[key] -> object[key];
+          -> object.key;
+dict.items() -> Object.entries(object)
+dict.keys() -> Object.keys(object);
+dict.values() -> Object.values(object);
+key in dict -> key in dict;
+
+</pre>
+
+<!--
+
+<h3>var types</h3>
+<pre>
+Boolean : true, false
+Null:
+Undefined: 변수 선언만 할 시 타입 ex var x;
+Number: int + float + inf + -inf + NaN
+String: string
+Symbol: ??
+</pre>
+
+<h3>string</h3>
+<pre>
+string.length = int : string 길이
+</pre>
+
+<h3>tuple</h3>
+
+<h3>list (array)</h3>
+
+<pre>
+list.length = int: array 길이
+list.pop()
+list.push(ele)
+list.shift() = list.pop(0)
+list.unshift(ele) = [ele] + list
+list.reverse() = list[::-1]
+list.sort()
+
+</pre>
+
+<h3>dictionary</h3>
+
+<pre>
+
+</pre>
+
+<h3>set</h3>
+
+<pre>
+
+</pre>
+
+<h3>Math</h3>
+
+<pre>
+Math.pow(int1, int2) = int1^int2
+Math.round(float) = int : 반올림
+Math.ceil(float) = int : 올림
+Math.floor(float) = int : 내림
+Math.sqrt(int) = int : 제곱근
+Math.random() = float : 0<= float <= 1 의 랜덤 float
+</pre>
+
+<h3>loops</h3>
+
+<pre>
+for (i = 0 ; i < 5 ; i++){
+  break;
+  continue;
+}
+for (i of array){
+
+}
+while (i < 5){
+  i++;
+}
+
+</pre>
+-->

@@ -55,6 +55,10 @@ defaults:
     values:
       subcategory: "general"
   - scope:
+      path: "_cs/javascript"
+    values:
+      subcategory: "javascript"
+  - scope:
       path: "_cs/jekyll"
     values:
       subcategory: "jekyll"

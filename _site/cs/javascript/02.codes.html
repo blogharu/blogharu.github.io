@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" href="/favicon.ico">
+    <!-- Set no cache -->
+<meta http-equiv="Expires" content="0"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+
+<!-- Naver Search Advisor Verification -->
+<meta name="naver-site-verification" content="ca2c024f54e47d3951b6219c5e4011dfdaf4d49f" />
+
+<!-- Google Search Console Verification -->
+<meta name="google-site-verification" content="ekab94Y4ePSDcV48eaZOqnlhnBfXIoXPQ2VJ76z3hW8" />
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SZC2V9HFTJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SZC2V9HFTJ');
+</script>
+
+    <!--jakyll plugins -->
+
+<!--jakyll-seo-->
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>javascript 코드 | 공부하는 하루</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="javascript 코드" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="python -&gt; javascript print(str) -&gt; console.log(str); &quot;&quot;&quot; comments &quot;&quot;&quot; -&gt; /* comments */ # comment -&gt; // comment type(val) -&gt; typeof(val);" />
+<meta property="og:description" content="python -&gt; javascript print(str) -&gt; console.log(str); &quot;&quot;&quot; comments &quot;&quot;&quot; -&gt; /* comments */ # comment -&gt; // comment type(val) -&gt; typeof(val);" />
+<link rel="canonical" href="https://blogharu.github.io/cs/javascript/02.codes.html" />
+<meta property="og:url" content="https://blogharu.github.io/cs/javascript/02.codes.html" />
+<meta property="og:site_name" content="공부하는 하루" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-13T07:40:42+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="javascript 코드" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"https://blogharu.github.io/cs/javascript/02.codes.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogharu.github.io/cs/javascript/02.codes.html"},"headline":"javascript 코드","dateModified":"2021-01-13T07:40:42+09:00","description":"python -&gt; javascript print(str) -&gt; console.log(str); &quot;&quot;&quot; comments &quot;&quot;&quot; -&gt; /* comments */ # comment -&gt; // comment type(val) -&gt; typeof(val);","datePublished":"2021-01-13T07:40:42+09:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!--jakyll-feed-->
+<link type="application/atom+xml" rel="alternate" href="https://blogharu.github.io/feed.xml" title="공부하는 하루" />
+
+    <title>javascript 코드</title>
+  </head>
+  <body>
+    <div class="warp">
+      <header><div class="header">
+  <div class="header-nav">
+    <nav>
+  <div class="header-nav-categories"><div>
+    <a href="/cs" >
+      CS
+    </a>
+    </div></div>
+  
+  <div class="header-nav-others"><div>
+    <a href="/about" >
+      About
+    </a>
+    </div></div>
+  <div style="clear:both"></div>
+</nav>
+
+  </div>
+  <div class="header-title">
+    <a href="/"><h1>공부하는 하루</h1></a>
+    <p>매일매일 조금씩 공부해보자</p>
+  </div>
+</div></header>
+
+      <div class="content">
+      <div class="post">
+  <div>
+    <h3 class="post-title">2. javascript 코드</h3><img class="post-title-img" src="/assets/images/cs/javascript/2/01-title.png" width="500px"><!-- If there is a title image, then create img<img class="post-img-title" src=/assets/images/cs/javascript/2/01-title.png>-->
+
+    <div class="post-content">
+      <h3>python -> javascript</h3>
+<pre>
+print(str) -> console.log(str);
+""" comments """ -> /* comments */
+# comment -> // comment
+type(val) -> typeof(val);
+
+for i in list: print(i)
+-> for (var i of list){ console.log(i); }
+
+for key in dict: print(dict[key])
+-> for (var key in dict) { console.log(dict[key]); }
+</pre>
+
+<h3>set -> set</h3>
+<pre>
+mySet = set() -> var mySet = new Set();
+set.add(ele) -> set.add(ele) ;
+set in ele -> set.has(ele) ;
+set.remove(ele) -> set.delete(ele);
+len(set) -> set.size ;
+list(set) -> Array.from(set)
+</pre>
+
+<h3>list -> array</h3>
+
+<pre>
+myList = [] -> var myArray = [];
+list.push(ele) -> array.push(ele);
+list.pop() -> array.pop();
+ele in list -> list.includes(ele);
+
+#sorting list
+
+#sort with string
+list.sort() -> array.sort()
+#sort with number
+list.sort() -> array.sort((a,b) => a - b)
+            -> array.sort(
+                 function(a,b) {
+                  return a - b ;
+                 }
+               );
+</pre>
+
+<h3>dict -> object</h3>
+<pre>
+myDict = {} -> myObject = {};
+dict[key] = val -> object[key] = val;
+dict[key] -> object[key];
+          -> object.key;
+dict.items() -> Object.entries(object)
+dict.keys() -> Object.keys(object);
+dict.values() -> Object.values(object);
+key in dict -> key in dict;
+
+</pre>
+
+<!--
+
+<h3>var types</h3>
+<pre>
+Boolean : true, false
+Null:
+Undefined: 변수 선언만 할 시 타입 ex var x;
+Number: int + float + inf + -inf + NaN
+String: string
+Symbol: ??
+</pre>
+
+<h3>string</h3>
+<pre>
+string.length = int : string 길이
+</pre>
+
+<h3>tuple</h3>
+
+<h3>list (array)</h3>
+
+<pre>
+list.length = int: array 길이
+list.pop()
+list.push(ele)
+list.shift() = list.pop(0)
+list.unshift(ele) = [ele] + list
+list.reverse() = list[::-1]
+list.sort()
+
+</pre>
+
+<h3>dictionary</h3>
+
+<pre>
+
+</pre>
+
+<h3>set</h3>
+
+<pre>
+
+</pre>
+
+<h3>Math</h3>
+
+<pre>
+Math.pow(int1, int2) = int1^int2
+Math.round(float) = int : 반올림
+Math.ceil(float) = int : 올림
+Math.floor(float) = int : 내림
+Math.sqrt(int) = int : 제곱근
+Math.random() = float : 0<= float <= 1 의 랜덤 float
+</pre>
+
+<h3>loops</h3>
+
+<pre>
+for (i = 0 ; i < 5 ; i++){
+  break;
+  continue;
+}
+for (i of array){
+
+}
+while (i < 5){
+  i++;
+}
+
+</pre>
+-->
+
+    </div>
+  </div>
+</div>
+<div class="post-nav"><div class="post-nav-prev"><div class="post-nav-arrow"><이전
+    </div>
+    <div class="post-nav-title">
+      <a href="/cs/javascript/01.introduction.html">1. javascript 카테고리 소개 </a>
+    </div></div>
+  <div class="post-nav-contents">
+    <a href="/cs/javascript">목차</a>
+  </div>
+  <div class="post-nav-next"><p>None</p></div>
+</div>
+
+
+      </div>
+      <div style="clear:both"></div>
+<footer><div class="footer">
+  <hr>
+</div></footer>
+
+    </div>
+  </body>
+</html>
