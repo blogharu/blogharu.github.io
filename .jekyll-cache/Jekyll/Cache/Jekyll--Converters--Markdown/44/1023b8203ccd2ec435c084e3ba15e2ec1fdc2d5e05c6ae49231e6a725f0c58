@@ -1,8 +1,0 @@
-I"¯<h3>python -&gt; javascript</h3>
-<pre>
-print(str) -&gt; console.log(str);
-""" comments """ -&gt; /* comments */
-# comment -&gt; // comment
-type(val) -&gt; typeof(val);
-</pre>
-:ET
