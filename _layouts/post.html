@@ -1,12 +1,13 @@
 ---
 layout: default
 ---
-<div class="post">
+<section class="post">
   <div>
     {% include post-title.html %}
     <div class="post-content">
+      <img class="post-title-img" src="/assets/images/{{page.category}}/{{page.subcategory}}/{{page.page}}/01-title.png" width="500px">
       {{ content }}
     </div>
   </div>
-</div>
+</section>
 {% include post-nav.html %}

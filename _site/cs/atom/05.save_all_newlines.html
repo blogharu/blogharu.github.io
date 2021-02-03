@@ -29,26 +29,28 @@
 
 <!--jakyll-seo-->
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>cs 이야기 | 공부하는 하루</title>
+<title>atom 마지막 빈 줄 유지하기 | 공부하는 하루</title>
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="cs 이야기" />
+<meta property="og:title" content="atom 마지막 빈 줄 유지하기" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="https://blogharu.github.io/cs/general" />
-<meta property="og:url" content="https://blogharu.github.io/cs/general" />
+<meta name="description" content="문제점" />
+<meta property="og:description" content="문제점" />
+<link rel="canonical" href="https://blogharu.github.io/cs/atom/05.save_all_newlines.html" />
+<meta property="og:url" content="https://blogharu.github.io/cs/atom/05.save_all_newlines.html" />
 <meta property="og:site_name" content="공부하는 하루" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-02-03T09:27:46+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="cs 이야기" />
+<meta property="twitter:title" content="atom 마지막 빈 줄 유지하기" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://blogharu.github.io/cs/general","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogharu.github.io/cs/general"},"headline":"cs 이야기","dateModified":"2021-02-03T09:27:46+09:00","datePublished":"2021-02-03T09:27:46+09:00","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://blogharu.github.io/cs/atom/05.save_all_newlines.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogharu.github.io/cs/atom/05.save_all_newlines.html"},"headline":"atom 마지막 빈 줄 유지하기","dateModified":"2021-02-03T09:27:46+09:00","description":"문제점","datePublished":"2021-02-03T09:27:46+09:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
 <!--jakyll-feed-->
 <link type="application/atom+xml" rel="alternate" href="https://blogharu.github.io/feed.xml" title="공부하는 하루" />
 
-    <title>cs 이야기</title>
+    <title>atom 마지막 빈 줄 유지하기</title>
   </head>
   <body>
     <div class="warp">
@@ -77,10 +79,48 @@
 </div></header>
 
       <div class="content">
-      <section class="contents">
-  <h3 class="post-title">cs 이야기</h3>
-  <ol><li><a href=/cs/general/01.data_serialization.html class="contents-content">데이터 직렬화란?</a></li></ol>
+      <section class="post">
+  <div>
+    
+<header>
+  <h3 class="post-title">5. atom 마지막 빈 줄 유지하기</h3>
+</header>
+<!-- If there is a title image, then create img-->
+
+    <div class="post-content">
+      <img class="post-title-img" src="/assets/images/cs/atom/5/01-title.png" width="500px">
+      <h3>문제점</h3>
+
+<pre>
+atom을 저장할 때 가장 마지막의 비어있는 줄들이 삭제되고 한 줄만 남는다.
+</pre>
+
+<h3>해결책</h3>
+
+<pre>
+  1. atom에서 설정 창에 간다 (ctrl + ',')
+  2. packages 버튼을 클릭한다
+  3. install packages 아래에 whitespace 입 후 core
+     packages 에서 나온 whitespace 의 settings
+     버튼을 클릭한다
+  4. Ensure single trailing newline 체크 박스를
+     해제한다.
+</pre>
+
+    </div>
+  </div>
 </section>
+<div class="post-nav"><div class="post-nav-prev"><div class="post-nav-arrow"><이전
+    </div>
+    <div class="post-nav-title">
+      <a href="/cs/atom/04.remove_telemetry_consent_screen.html">4. atom Telemetry Consent 화면 없애기 </a>
+    </div></div>
+  <div class="post-nav-contents">
+    <a href="/cs/atom">목차</a>
+  </div>
+  <div class="post-nav-next"><p>None</p></div>
+</div>
+
 
       </div>
       <div style="clear:both"></div>

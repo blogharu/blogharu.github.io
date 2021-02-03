@@ -7,14 +7,15 @@ layout: default
 {%- when "math" -%}{%- assign collection = site.math -%}
 {%- endcase -%}
 
-<div class="contents">
-  {% include post-title.html %}
+<section class="contents">
+  <h3 class="post-title">{{page.title}}</h3>
   <ol>
-    {%- assign contents = collection | where: "subcategory", page.subcategory -%}
-    {%- for content in contents -%}
-      {%- if content.title != page.title -%}
-        <li><a href={{content.url}} class="contents-content">{{content.title}}</a></li>
-      {%- endif -%}
-    {%- endfor -%}
+      {%- assign contents = collection | where: "subcategory", page.subcategory -%}
+      {%- for content in contents -%}
+          {%- if content.title != page.title and content.thumbnail -%}
+
+    <li><a href={{content.url}} class="contents-content">{{content.title}}</a></li>
+          {%- endif -%}
+      {%- endfor -%}
   </ol>
-</div>
+</section>

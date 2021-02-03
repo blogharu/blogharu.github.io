@@ -4,8 +4,7 @@
     <div class="index-recently-posts">
       {%- assign posts = site.cs | site.math | site.music | sort: "upload" | reverse -%}
       {%- for post in posts -%}
-        {%- if post.upload -%}
-          {%- if post.thumbnail -%}
+        {%- if post.upload and post.thumbnail-%}
             <div class="index-recently-post">
               <div class="index-recently-post-thumbnail">
                 <a href="{{post.url}}">
@@ -23,7 +22,6 @@
             {%- capture count -%}{%- increment -%}{%- endcapture -%}
             {%- if count == '4' -%}
               {%- break -%}
-            {%- endif -%}
           {%- endif -%}
         {%- endif -%}
       {%- endfor -%}
