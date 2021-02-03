@@ -1,12 +1,5 @@
 
-<header>
-  <h3 class="post-title">{{page.page}}. {{page.title}}</h3>
+<header class="post-title">
+  <h3>{{page.page}}. {{page.title}}</h3>
+  <p>[<a href="../../{{page.category}}"> {{page.category | upcase}}</a> / <a href="../../{{page.category}}/{{post.subcategory}}">{{page.subcategory}}</a> ] {{page.upload}}</p>
 </header>
-<!-- If there is a title image, then create img
-{%- for img in site.static_files -%}
-  {%- capture img_path -%}/assets/images/{{page.category}}/{{page.subcategory}}/{{page.page}}/01-title.png {%- endcapture -%}
-  {%- if img.path == img_path -%}
-    <img class="post-img-title" src={{img_path}}>
-  {%- endif -%}
-{%- endfor -%}
--->
