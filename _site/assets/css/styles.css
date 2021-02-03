@@ -1,5 +1,7 @@
 /* { -ms-user-select: none; -moz-user-select: -moz-none; -khtml-user-select: none; -webkit-user-select: none; user-select: none; } */
-.warp { width: 600px; margin: auto; }
+:root { --width-main: 600px; --width-content: 500px; }
+
+.warp { width: var(--width-main); margin: auto; }
 
 .content { overflow: hidden; margin-left: 16px; margin-right: 16px; height: auto; }
 
@@ -81,7 +83,7 @@ nav { border-bottom: 1px solid black; padding-bottom: 8px; }
 
 .post-nav p { margin: 0px; opacity: 0; }
 
-.post-title { padding-bottom: 12px; height: auto; border-bottom: 1px solid black; margin-bottom: 12px; }
+.post-title { margin: 0px; padding-bottom: 12px; height: auto; border-bottom: 1px solid black; margin-bottom: 12px; }
 
 .post-title h3 { margin: 0px; padding-left: 8px; margin-bottom: 8px; }
 
@@ -97,7 +99,7 @@ nav { border-bottom: 1px solid black; padding-bottom: 8px; }
 
 .category a:hover { color: #333333; }
 
-.contents { width: 500px; margin: auto; }
+.contents { width: var(--width-content); margin: auto; }
 
 .contents p { margin: 0; padding-left: 8px; height: 25px; align-self: flex-end; }
 
@@ -109,9 +111,11 @@ nav { border-bottom: 1px solid black; padding-bottom: 8px; }
 
 .contents ol { margin-top: 8px; padding-left: 24px; }
 
+.contents .post-title { padding-left: 8px; }
+
 .post { width: 500px; margin: auto; }
 
-.post-title-img { padding-bottom: 12px; border-bottom: 1px solid black; margin-bottom: 12px; }
+.post-title-img { padding-bottom: 12px; border-bottom: 1px solid black; }
 
 .post-content h2 { padding-left: 8px; margin-top: 8px; margin-bottom: 8px; }
 

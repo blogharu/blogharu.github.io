@@ -8,9 +8,15 @@
   user-select: none;
 }
 */
+
+:root {
+  --width-main: 600px;
+  --width-content: 500px;
+}
+
 //warp
 .warp{
-  width: 600px;
+  width: var(--width-main);
   margin: auto;
 }
 
