@@ -17,7 +17,7 @@
   </div>
   <div class="post-nav-next">
     {%- assign index = page.page | plus:1 -%}
-    {%- if contents[index] -%}
+    {%- if contents[index] and contents[index].thumbnail -%}
     <div class="post-nav-arrow">>다음</div>
     <div class="post-nav-title">
       <a href="{{contents[index].url}}"> {{contents[index].page}}. {{contents[index].title}} </a>

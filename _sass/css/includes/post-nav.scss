@@ -1,19 +1,27 @@
+
+$width-arrow: 8px;
+$width-contents: 40px;
+$width-container: calc(var(--width-content)/2 - 20px);
+$width-near-title: 200px;
+
 .post-nav{
+  width: var(--width-content);
   border-top: 1px solid black;
   padding-top: 4px;
+  margin: auto;
 }
 
 .post-nav-prev{
   display: inline-block;
   float: left;
-  width: 262px;
+  width: $width-container;
   height: 24px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .post-nav-contents{
-  width:40px;
+  width:$width-contents;
   height: 24px;
   display: inline-block;
   text-align: center;
@@ -22,7 +30,7 @@
 .post-nav-next{
   display: inline-block;
   float: right;
-  width: 262px;
+  width: $width-container;
   height: 24px;
   text-align: right;
 }
@@ -34,7 +42,7 @@
 .post-nav-title{
   display: inline-block;
   overflow: hidden;
-  width: 220px;
+  width: $width-near-title;
   height: 24px;
   text-overflow: ellipsis;
   white-space: nowrap;
