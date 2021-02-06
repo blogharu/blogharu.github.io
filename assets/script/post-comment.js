@@ -7,10 +7,10 @@ SetComment.innerHTML = `<h3 style="padding-left:8px; width:auto; ">댓글 ▼</h
 function toggleComment(){
   isComment = Comment.classList.toggle('hidden')
   if (isComment){
-    SetComment.innerHTML = `<h3 style="padding-left:8px; width:auto; display:inline-block;">댓글 ▼</h3>`;
+    SetComment.innerHTML = `<h3 style="padding-left:8px; width:auto;">댓글 ▼</h3>`;
   }
   else{
-    SetComment.innerHTML = `<h3 style="padding-left:8px; width:auto; display:inline-block;">댓글 ▲</h3>`;
+    SetComment.innerHTML = `<h3 style="padding-left:8px; width:auto;">댓글 ▲</h3>`;
   }
   localStorage.setItem('isComment', isComment)
 }
