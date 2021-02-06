@@ -51,6 +51,10 @@ defaults:
     values:
       subcategory: "atom"
   - scope:
+      path: "_cs/blog"
+    values:
+      subcategory: "blog"
+  - scope:
       path: "_cs/general"
     values:
       subcategory: "general"

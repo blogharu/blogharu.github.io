@@ -14,10 +14,14 @@
   --width-content: 500px;
 }
 
-//warp
-.warp{
+//wrap
+.wrap{
   width: var(--width-main);
   margin: auto;
+}
+
+.hidden{
+  display: none;
 }
 
 // content

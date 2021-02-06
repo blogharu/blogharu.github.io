@@ -8,6 +8,8 @@ layout: default
       <img class="post-title-img" src="/assets/images/{{page.category}}/{{page.subcategory}}/{{page.page}}/01-title.png" width="500px">
       {{ content }}
     </div>
-  </div>
+    {% include post-comment.html %}
+
 </section>
 {% include post-nav.html %}
+

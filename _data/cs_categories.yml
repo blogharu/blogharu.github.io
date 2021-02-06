@@ -14,6 +14,7 @@
 
 - category: 자유 게시판
   sub_categories:
+    - blog
     - general
 
 #- category: 프로그래밍 언어
