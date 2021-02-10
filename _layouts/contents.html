@@ -9,13 +9,11 @@ layout: default
 
 <section class="contents">
   <h3 class="post-title">{{page.title}}</h3>
-  <ol>
-      {%- assign contents = collection | where: "subcategory", page.subcategory -%}
+      {%- assign contents = collection | where: "subcategory", page.subcategory | sort: "page" -%}
       {%- for content in contents -%}
           {%- if content.title != page.title and content.thumbnail -%}
-
-    <li><a href={{content.url}} class="contents-content">{{content.title}}</a></li>
+            {%- assign pages = content.page | split: "."-%}
+    {%- for p in pages offset:1 -%}&nbsp;&nbsp;&nbsp;&nbsp;{%- endfor -%}<a href={{content.url}} class="contents-content">{{content.page}}&nbsp;&nbsp;{{content.title}}</a><br>
           {%- endif -%}
       {%- endfor -%}
-  </ol>
 </section>

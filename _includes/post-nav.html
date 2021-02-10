@@ -1,7 +1,14 @@
 <div class="post-nav">
-  {%- assign contents = site.cs | where: "subcategory", page.subcategory -%}
+  {%- assign contents = site.cs | where: "subcategory", page.subcategory | sort: "page"-%}
+  {%- assign curIndex = 0 -%}
+  {%- for content in contents -%}
+    {%- if page.page == content.page -%}
+      {%-break-%}
+    {%- endif -%}
+    {%- assign curIndex = curIndex | plus: 1 -%}
+  {%-  endfor -%}
   <div class="post-nav-prev">
-    {%- assign index = page.page | minus:1 -%}
+    {%- assign index = curIndex | minus:1 -%}
     {%- if index > 0 -%}
     <div class="post-nav-arrow"><이전
     </div>
@@ -16,7 +23,7 @@
     <a href="{{contents[0].url}}">목차</a>
   </div>
   <div class="post-nav-next">
-    {%- assign index = page.page | plus:1 -%}
+    {%- assign index = curIndex | plus:1 -%}
     {%- if contents[index] and contents[index].thumbnail -%}
     <div class="post-nav-arrow">>다음</div>
     <div class="post-nav-title">

@@ -14,6 +14,14 @@
   --width-content: 500px;
 }
 
+body{
+  margin:0px;
+}
+
+.main-header{
+  padding-top:4px;
+}
+
 //wrap
 .wrap{
   width: var(--width-main);
@@ -22,6 +30,10 @@
 
 .hidden{
   display: none;
+}
+
+.bold{
+  font-weight: bold;
 }
 
 // content

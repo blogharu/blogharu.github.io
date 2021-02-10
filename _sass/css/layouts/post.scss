@@ -23,13 +23,13 @@
 
 .post-content h4{
   padding-left: 8px;
-  margin-top: 8px;
+  margin-top: 28px;
   margin-bottom: 28px;
 }
 
 .post-content h5{
   padding-left: 8px;
-  margin-top: 8px;
+  margin-top: 28px;
   margin-bottom: 28px;
 }
 
@@ -46,9 +46,13 @@
   padding-right: 8px;
   padding-left: 8px;
   width: 484px;
-  overflow: auto;
+//  overflow: auto;
   white-space: pre-wrap; // p width 초과시 new line
   line-height: 2; // 줄 사이 간격
+}
+
+.highlight pre{
+  white-space: pre;
 }
 
 .post-content hr{

@@ -1,9 +1,15 @@
 /* { -ms-user-select: none; -moz-user-select: -moz-none; -khtml-user-select: none; -webkit-user-select: none; user-select: none; } */
 :root { --width-main: 600px; --width-content: 500px; }
 
+body { margin: 0px; }
+
+.main-header { padding-top: 4px; }
+
 .wrap { width: var(--width-main); margin: auto; }
 
 .hidden { display: none; }
+
+.bold { font-weight: bold; }
 
 .content { overflow: hidden; margin-left: 16px; margin-right: 16px; height: auto; }
 
@@ -95,6 +101,11 @@ nav { border-bottom: 1px solid black; padding-bottom: 8px; }
 
 .post-title h3 { margin: 0px; padding-left: 8px; margin-bottom: 8px; }
 
+.contents-list { position: fixed; left: calc(50% + 350px); top: 194px; border-top: 1px solid black; border-bottom: 1px solid black; border: 1px solid black; }
+
+@media (max-width: 1050px) { .contents-list { display: none; } }
+
+/* .contents-list { background-color: black; width:200px; height:300px; display:inline-block; position:fixed; right:100px; top:200px; } */
 .categories { margin-left: 2px; margin-right: 2px; margin-bottom: 16px; overflow: hidden; height: auto; }
 
 .category-title { margin: 0px; padding-left: 8px; height: 30px; border-bottom: 1px solid black; }
@@ -129,13 +140,15 @@ nav { border-bottom: 1px solid black; padding-bottom: 8px; }
 
 .post-content h3 { padding-left: 8px; margin-top: 32px; margin-bottom: 32px; }
 
-.post-content h4 { padding-left: 8px; margin-top: 8px; margin-bottom: 28px; }
+.post-content h4 { padding-left: 8px; margin-top: 28px; margin-bottom: 28px; }
 
-.post-content h5 { padding-left: 8px; margin-top: 8px; margin-bottom: 28px; }
+.post-content h5 { padding-left: 8px; margin-top: 28px; margin-bottom: 28px; }
 
 .post-content p { padding-bottom: 10px; padding-right: 8px; width: 484px; word-wrap: break-word; line-height: 2; }
 
-.post-content pre { padding-bottom: 10px; padding-right: 8px; padding-left: 8px; width: 484px; overflow: auto; white-space: pre-wrap; line-height: 2; }
+.post-content pre { padding-bottom: 10px; padding-right: 8px; padding-left: 8px; width: 484px; white-space: pre-wrap; line-height: 2; }
+
+.highlight pre { white-space: pre; }
 
 .post-content hr { margin: 0px; border: 0px; border-top: 1px solid black; }
 

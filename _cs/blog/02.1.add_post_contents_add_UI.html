@@ -1,0 +1,69 @@
+---
+title: 포스트 차례창 추가 - UI 구현
+upload: 2021-02-08
+page: 2.1
+thumbnail: true
+---
+
+<h3>계획</h3>
+
+<pre>
+저는 차례창을 아래 그림과 같이 위치하고자 합니다.
+</pre>
+<img src="/assets/images/cs/blog/2.1/02-ui-location.png" width="500px">
+<pre>
+자세한 정보는 다음과 같습니다.
+
+  1. viewport 기준 동일한 위치에 존재한다.
+  2. width 는 200px 이다.
+  3. viewport 가 1050px 이하일 시 사라진다.
+  4. 스크롤이 최상단에 위치할 때 main header 의 아래 줄
+     끝에 맞춘다.
+</pre>
+
+<h3>구현</h3>
+
+<pre>
+저는 class 가 contents-list 인 div 을 생성하고 css 를 다음과 같이 설정하였습니다.
+</pre>
+
+{% highlight javascript linenos%}
+.contents-list {
+  // viewport 기준 동일한 위치에 오도록 설정
+  position:fixed;
+  // width 를 200px 로 설정
+  width:200px;
+  // 스크롤 최상단에 위치할 때 main header 의
+  // 아래 줄 끝에 맞게 설정
+  left:calc(50% + 300px);
+  top:194px;
+  // ui 가 보이도록 설정 (삭제 예정)
+  background-color: black;
+  height:300px;
+}
+
+// viewport 가 1050px 이하일 시 사라지도록 설정
+
+@media (max-width: 1050px){
+  .contents-list {
+      display: none;
+  }
+}
+{% endhighlight %}
+
+<pre>
+추가적인 설명이 필요한 부분은 left 와 top 부분 같습니다.
+
+top 은 제가 생성한 main header 의 height 가 194px 이기 때문에 194px 로 설정하였습니다.
+
+left 같은 경우에는 main header 의 width 가 600px 이여서 전체 화면의 50% 에서 300px 더 옆에 오도록 설정하였습니다. 처음에는 50vw + 300px 을 사용하였는데 vw 는 viewport 의 width 고 이는 scrollbar 길이를 포함하기에 원하는 위치보다 더 오른쪽에 div 가 생성되었습니다. 아래 그림은 left: calc(50vw + 300px) 의 결과입니다.
+</pre>
+
+<img src="/assets/images/cs/blog/2.1/03-ui-with-vw.png" width="500px">
+
+<pre>
+보시면 검은 div 와 main header 의 아래 줄 사이에 아주 작은 틈이 있는 것을 확인할 수 있습니다. 이 틈은 scrollbar 가 있을 때만 생성되었습니다. left 를 left: calc(50% + 300px) 로 수정하면 이 틈이 사라진 것을 확인 할 수 있습니다. 아래 그림은 left: calc(50% + 300px) 의 결과입니다.
+</pre>
+
+<img src="/assets/images/cs/blog/2.1/04-ui-with-percent.png" width="500px">
+
