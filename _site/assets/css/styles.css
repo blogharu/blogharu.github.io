@@ -1,6 +1,8 @@
 /* { -ms-user-select: none; -moz-user-select: -moz-none; -khtml-user-select: none; -webkit-user-select: none; user-select: none; } */
 :root { --width-main: 600px; --width-content: 500px; }
 
+:root { --width-margin: 16px; --color-background: #FFFFFF; --color-font: #000000; --color-font-hover: #444444; }
+
 body { margin: 0px; }
 
 .main-header { padding-top: 4px; }
@@ -11,13 +13,13 @@ body { margin: 0px; }
 
 .bold { font-weight: bold; }
 
-.content { overflow: hidden; margin-left: 16px; margin-right: 16px; height: auto; }
+.content { overflow: hidden; margin-left: var(--width-margin); margin-right: var(--width-margin); height: auto; }
 
-a { color: #000000; text-decoration: none; }
+a { color: var(--color-font); text-decoration: none; }
 
-a:hover { color: #333333; }
+a:hover { color: var(--color-font-hover); }
 
-.about p { text-align: center; }
+p, pre, h1, h2, h3, h4, h5, h6 :not(.highlight pre) { color: var(--color-font); }
 
 a { font-size: 16px; }
 
@@ -101,9 +103,15 @@ nav { border-bottom: 1px solid black; padding-bottom: 8px; }
 
 .post-title h3 { margin: 0px; padding-left: 8px; margin-bottom: 8px; }
 
-.contents-list { position: fixed; left: calc(50% + 350px); top: 194px; border-top: 1px solid black; border-bottom: 1px solid black; border: 1px solid black; }
+.contents-list-wrapper { position: fixed; left: calc(50% + 350px); top: 194px; border-right: 1px solid #AAAAAA; border-bottom: 1px solid #AAAAAA; overflow: hidden; width: 250px; }
 
-@media (max-width: 1050px) { .contents-list { display: none; } }
+@media (max-width: 1050px) { .contents-list-wrapper { display: none; } }
+
+.contents-list { margin: 16px; overflow: hidden; height: 100%; }
+
+.contents-list a { font-size: 12px; display: block; overflow-x: hidden; }
+
+.contents-list a:hover { font-weight: bold; }
 
 /* .contents-list { background-color: black; width:200px; height:300px; display:inline-block; position:fixed; right:100px; top:200px; } */
 .categories { margin-left: 2px; margin-right: 2px; margin-bottom: 16px; overflow: hidden; height: auto; }

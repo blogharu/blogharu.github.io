@@ -9,10 +9,24 @@
 }
 */
 
+// General
 :root {
   --width-main: 600px;
   --width-content: 500px;
 }
+
+// Light mode
+:root{
+  --width-margin: 16px;
+  --color-background: #FFFFFF;
+  --color-font: #000000;
+  --color-font-hover: #444444;
+}
+
+// Dark mode
+
+
+
 
 body{
   margin:0px;
@@ -39,21 +53,24 @@ body{
 // content
 .content{
   overflow:hidden;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-left: var(--width-margin);
+  margin-right: var(--width-margin);
   height: auto;
 }
 
 // a
 a {
-  color: #000000;
+  color: var(--color-font);
   text-decoration: none;
 }
 
 a:hover{
-  color: #333333;
+  color: var(--color-font-hover);
 }
 
-.about p{
-  text-align: center;
+p, pre, h1, h2, h3, h4, h5, h6 :not(.highlight pre){
+  color: var(--color-font);
 }
+
+
+
