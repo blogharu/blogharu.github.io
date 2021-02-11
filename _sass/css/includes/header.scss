@@ -4,7 +4,7 @@
 .main-header {
   height: 190px;//120px;
   margin-bottom: 5px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .header-title{
@@ -16,7 +16,7 @@
 // include navigation.html
 
 nav{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: 8px;
 }
 

@@ -88,3 +88,28 @@ if (location.hostname === 'localhost'){
   appDevTool = new AppDevTool($target);
 }
 
+// dark mode
+
+let darkToggle = document.querySelector(".set-darkmode");
+let isDark = sessionStorage.getItem("isDark");
+if (isDark === null){
+  isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  sessionStorage.setItem("isDark", isDark);
+}
+// set initial setting
+let Body = document.getElementsByTagName("body")[0]
+if (isDark==="true"){
+  Body.classList.add("dark");
+  darkToggle.checked = true;
+}
+
+darkToggle.addEventListener('click', (event)=>{
+  if (darkToggle.checked){
+    Body.classList.add("dark");
+  }
+  else{
+    Body.classList.remove("dark");
+  }
+  sessionStorage.setItem("isDark", darkToggle.checked);
+})
+console.log(darkToggle.checked);

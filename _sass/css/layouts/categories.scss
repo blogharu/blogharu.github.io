@@ -10,7 +10,7 @@
   margin: 0px;
   padding-left: 8px;
   height: 30px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .category{
@@ -24,12 +24,7 @@
   margin-top: 12px;
 }
 
-.category a{
-  text-decoration: none;
-  color: #000000;
-}
-
 .category a:hover {
   // When mouse is on the link
-  color: #333333;
+  color: var(--color-font-hover);
 }

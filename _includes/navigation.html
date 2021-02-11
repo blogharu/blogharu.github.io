@@ -8,8 +8,11 @@
     </div>
     {%- endfor -%}
   </div>
-  
+
   <div class="header-nav-others">
+    {%- include nav-set-darkmode.html -%}
+
+    <!--
     {%- for other in site.data.navigation[1] -%}
     <div>
     <a href="{{ other.link }}" {% if page.url == other.link %}class="current"{% endif %}>
@@ -17,6 +20,8 @@
     </a>
     </div>
     {%- endfor -%}
+    -->
   </div>
   <div style="clear:both"></div>
 </nav>
+

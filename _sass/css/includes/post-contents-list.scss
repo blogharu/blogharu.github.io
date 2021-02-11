@@ -4,11 +4,14 @@
   top:194px;
 //  border-top: 1px solid black;
 //  border-bottom: 1px solid black;
-  border-right: 1px solid #AAAAAA;
-  border-bottom: 1px solid #AAAAAA;
+  border-right: 1px solid var(--color-contents-list-border);//#AAAAAA;
+  border-bottom: 1px solid var(--color-contents-list-border);//#AAAAAA;
   overflow:hidden;
   width:250px;
-//  background-color: #F4F3D7;
+  background-color: var(--color-contents-list-background);
+  //  background-color: #F4F3D7;
+//  background-color: #E6B4FF;
+//  background-color: #222222;
 }
 
 @media (max-width: 1050px){
@@ -29,6 +32,7 @@
   font-size: 12px;
   display: block;
   overflow-x: hidden;
+//  color:black;
 }
 
 .contents-list a:hover{

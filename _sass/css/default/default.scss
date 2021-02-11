@@ -13,23 +13,37 @@
 :root {
   --width-main: 600px;
   --width-content: 500px;
+  --width-margin: 16px;
 }
 
 // Light mode
 :root{
-  --width-margin: 16px;
   --color-background: #FFFFFF;
   --color-font: #000000;
   --color-font-hover: #444444;
+  --color-font-visitied: #888888;
+  --color-border: black;
+  --color-contents-list-border: #AAAAAA;
+  --color-contents-list-background: #F4F3D7;
 }
 
 // Dark mode
 
-
+body.dark{
+  --color-background: #111111;
+  --color-font: #DDDDDD;
+  --color-font-hover: #444444;
+  --color-font-visitied: #888888;
+  --color-border: white;
+  --color-contents-list-border: black;
+  --color-contents-list-background: #222222;
+}
 
 
 body{
   margin:0px;
+  background-color: var(--color-background);
+  color: var(--color-font);
 }
 
 .main-header{
@@ -68,7 +82,7 @@ a:hover{
   color: var(--color-font-hover);
 }
 
-p, pre, h1, h2, h3, h4, h5, h6 :not(.highlight pre){
+p, pre, h1, h2, h3, h4, h5, h6, li :not(.highlight pre){
   color: var(--color-font);
 }
 

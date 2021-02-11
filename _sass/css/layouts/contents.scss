@@ -12,18 +12,16 @@
 
 .contents a{
   padding-left: 8px;
-  text-decoration: none;
-  color: #000000;
 }
 
 .contents a:visited{
   // after visit
-  color: #888888;
+  color: var(--color-font-visitied);
 }
 
 .contents a:hover {
   // When mouse is on the link
-  color: #333333;
+  color: var(--color-font-hover);
 }
 
 .contents ol{
