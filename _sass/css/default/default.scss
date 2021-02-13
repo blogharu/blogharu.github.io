@@ -9,6 +9,7 @@
 }
 */
 
+
 // General
 :root {
   --width-main: 600px;
@@ -37,6 +38,7 @@ body.dark{
   --color-border: white;
   --color-contents-list-border: black;
   --color-contents-list-background: #222222;
+  transition: var(--transition-darkmode);
 }
 
 
@@ -44,6 +46,7 @@ body{
   margin:0px;
   background-color: var(--color-background);
   color: var(--color-font);
+  transition: var(--transition-darkmode);
 }
 
 .main-header{

@@ -1,6 +1,6 @@
 
 // Only run if it is localhost
-
+/*
 function processFile(file){
   var reader = new FileReader();
   reader.readAsText(file, "UTF-8");
@@ -9,14 +9,14 @@ function processFile(file){
   }
 }
 
-const $target = document.querySelector(".wrap");
 
 var xhr;
-
+*/
 if (location.hostname === 'localhost'){
+  const $target = document.querySelector(".wrap");
   class AppDevTool {
     constructor($target) {
-      console.log($target);
+//      console.log($target);
       this.wrapper = document.createElement("div");
       this.wrapper.className = "wrap-app-dev-tool";
       $target.insertBefore(this.wrapper, $target.firstChild)
@@ -28,7 +28,7 @@ if (location.hostname === 'localhost'){
       toolButton.className = "div-tool-open";
       toolButton.innerText = "Dev"
       toolButton.addEventListener('click',this.onClickDivToolOpen);
-
+      /*
       var input = document.createElement('input');
       input.type = "file";
       input.accept="text/plain, text/html, .jsp";
@@ -38,9 +38,9 @@ if (location.hostname === 'localhost'){
         console.log(event.target.files)
 //        processFile(event.target.files[0]);
       }
-
+      */
       this.wrapper.appendChild(toolButton);
-      this.wrapper.appendChild(input);
+//      this.wrapper.appendChild(input);
 
     }
 
@@ -88,28 +88,4 @@ if (location.hostname === 'localhost'){
   appDevTool = new AppDevTool($target);
 }
 
-// dark mode
-
-let darkToggle = document.querySelector(".set-darkmode");
-let isDark = sessionStorage.getItem("isDark");
-if (isDark === null){
-  isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-  sessionStorage.setItem("isDark", isDark);
-}
-// set initial setting
-let Body = document.getElementsByTagName("body")[0]
-if (isDark==="true"){
-  Body.classList.add("dark");
-  darkToggle.checked = true;
-}
-
-darkToggle.addEventListener('click', (event)=>{
-  if (darkToggle.checked){
-    Body.classList.add("dark");
-  }
-  else{
-    Body.classList.remove("dark");
-  }
-  sessionStorage.setItem("isDark", darkToggle.checked);
-})
-console.log(darkToggle.checked);
+Body.classList.add('transition');

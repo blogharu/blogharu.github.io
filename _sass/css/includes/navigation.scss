@@ -1,0 +1,35 @@
+// include navigation.html
+
+nav{
+  padding-top:4px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 8px;
+}
+
+.header-nav-categories{
+  display: inline;
+  width: 400px;
+}
+
+.header-nav-categories div{
+  float: left
+}
+
+.header-nav-categories a{
+  align-self: center;
+  margin: 1rem;
+}
+
+.header-nav-others {
+  display: inline;
+  width: 200px;
+}
+
+.header-nav-others div{
+  float: right;
+}
+
+.header-nav-others a{
+  align-self: center;
+  margin: 1rem;
+}

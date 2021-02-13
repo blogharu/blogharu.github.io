@@ -6,7 +6,7 @@ $width-near-title: 200px;
 
 .post-nav{
   width: var(--width-content);
-  border-top: 1px solid black;
+  border-top: 1px solid var(--color-border);
   padding-top: 4px;
   margin: auto;
 }

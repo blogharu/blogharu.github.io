@@ -1,0 +1,131 @@
+---
+title: 다크모드 추가 - UI 구현
+upload: 2021-02-11
+//page: 3.1
+//thumbnail: true
+---
+
+<h3>계획</h3>
+
+<pre>
+제가 원하는 ui 는 아래 사진과 같습니다.
+</pre>
+
+<img src="/assets/images/cs/blog/3.1/02.png" width="200px" style="display:block; margin:auto;">
+
+<pre>
+이 버튼이 화면 우측 상단에 위치하여 유저가 자유롭게 다크모드와 라이트모드를 설정 할 수 있으면 좋겠습니다.
+</pre>
+
+<h3>구현</h3>
+
+<pre>
+구현은 3 단계에 걸쳐서 하겠습니다.
+
+  1. 슬라이드 토글버튼 구현
+  2. 태양과 달 ui 구현
+  3. 우측 상단에 ui 구현
+</pre>
+
+<h4>1. 슬라이드 토글버튼 구현</h4>
+
+<pre>
+슬라이드 토글 버튼은 <a href="https://www.w3schools.com/howto/howto_css_switch.asp">w3schools.com</a> 에서 가저왔습니다. 코드는 다음과 같습니다.
+</pre>
+
+{% highlight html linenos%}
+<!-- html 코드 -->
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+{% endhighlight %}
+<pre></pre>
+{% highlight css linenos%}
+// css 코드
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+{% endhighlight %}
+
+
+<pre>
+위의 코드를 이용하면 아래와 같이 토글버튼이 생성됩니다.
+</pre>
+<div style="margin:auto; width:60px; height:20px;">
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
+</div>
+
+<h4>2. 태양과 달 ui 구현</h4>
+
+<pre>
+태양과 달 ui 는 <a href="https://fontello.com/">fontello</a> 를 이용했습니다. <a href="https://fontello.com/">fontello</a> 사이트에서 Font Awesome 의 sun 과 moon 을 이용했습니다.
+</pre>
+
+<h4>3. 우측 상단에 ui 구현</h4>
+
+<pre>
+기존에 있던 About 버튼을 CS 옆으로 옮기고 위에서 만든 버튼을
+</pre>
+
