@@ -1,6 +1,6 @@
 - category: 웹 개발
   sub_categories:
-#    - css
+    - css
 #    - html
     - javascript
     - jekyll

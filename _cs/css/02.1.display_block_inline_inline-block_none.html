@@ -1,0 +1,275 @@
+---
+title: css display - block, inline, inline-block, none
+upload: 2021-02-14
+page: 2.1
+thumbnail: true
+---
+
+<h3>display: block</h3>
+
+<pre>
+block 속성값은 해당 요소가 새 줄에서 시작하고 그 요소가 가질 수 있는 최대한의 width 값을 갖습니다. width 값을 설정할 수 있지만, 공간이 있어도 다음 요소가 옆에 오지 못합니다. 또한 height 값을 설정할 수 있습니다. p 와 div 는 초깃값으로 display: block 을 갖는데 그러기 때문에 새 줄에서 시작하게 됩니다.
+</pre>
+
+<h4>display: block 코드</h4>
+
+{% highlight html linenos%}
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;">
+    div 3 green height 50px
+  </div>
+</div>
+{% endhighlight %}
+
+<h4>display: block 결과</h4>
+
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;">
+    div 3 green height 50px
+  </div>
+</div>
+
+<h3>display: inline</h3>
+
+<pre>
+inline 속성값은 block 속성값처럼 새로운 줄에서 시작하지 않습니다. 또한 width 값과 height 값을 설정할 수 없습니다. 이는 inline 속성은 요소 안의 content 가 딱 출력될 정도의 width 와 height 값을 갖기 때문입니다. inline 은 새로운 줄에서 시작하지 않으니 두 개의 요소가 연속적으로 나오게 할 수 있습니다. span 과 a 태그는 초깃값으로 display: inline 을 갖습니다.
+</pre>
+
+<h4>display: inline 코드</h4>
+
+
+{% highlight html linenos%}
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;
+              display:inline;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;
+              display:inline;">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;
+              display:inline;">
+    div 3 green height 50px
+  </div>
+</div>
+{% endhighlight %}
+
+<h4>display: inline 결과</h4>
+
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;
+              display:inline;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;
+              display:inline;">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;
+              display:inline;">
+    div 3 green height 50px
+  </div>
+</div>
+
+<h3>display: inline-block</h3>
+
+<pre>
+inline-block 속성값은 새 줄에서 시작하지 않습니다. 또한 inline 같이 content 가 출력될 만큼의 최소한의 width 와 height 값을 갖지 않습니다. 따라서 width 값과 height 값을 자유롭게 설정할 수 있고 두 개의 요소가 연속적으로 나열될 수 있습니다.
+</pre>
+
+<h4>display: inline-block 코드</h4>
+
+{% highlight html linenos%}
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;
+              display:inline-block;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;
+              display:inline-block;">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;
+              display:inline-block;">
+    div 3 green height 50px
+  </div>
+</div>
+{% endhighlight %}
+
+<h4>display: inline-block 결과</h4>
+
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;
+              display:inline-block;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;
+              display:inline-block;">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;
+              display:inline-block;">
+    div 3 green height 50px
+  </div>
+</div>
+
+<h3>display: none</h3>
+
+<pre>
+none 속성값은 해당 요소를 화면에서 없애버립니다. 비슷한 거로 visibility: hidden 이 있는데 이것은 해당 요소가 차지하던 공간은 남아있지만 화면에 출력이 안 되는 반면 display: none 은 해당 요소가 차지하던 공간도 없애버립니다.
+</pre>
+
+<h4>display: none 코드</h4>
+
+<pre>
+inline-block 코드에서 div 2 에 display: none 을 사용하겠습니다.
+</pre>
+
+{% highlight html linenos%}
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;
+              display:inline-block;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;
+              display:none;">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;
+              display:inline-block;">
+    div 3 green height 50px
+  </div>
+</div>
+{% endhighlight %}
+
+<h4>display: none 결과</h4>
+
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;
+              display:inline-block;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;
+              display:none;">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;
+              display:inline-block;">
+    div 3 green height 50px
+  </div>
+</div>
+
+<h4>visibility: hidden 코드</h4>
+
+<pre>
+inline-block 코드에서 div 2 에 visibility: hidden 을 사용하겠습니다.
+</pre>
+
+{% highlight html linenos%}
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;
+              display:inline-block;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;
+              display:inline-block;
+              visibility: hidden">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;
+              display:inline-block;">
+    div 3 green height 50px
+  </div>
+</div>
+{% endhighlight %}
+
+<h4>visibility: hidden 결과</h4>
+
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;
+              display:inline-block;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;
+              display:inline-block;
+              visibility: hidden">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;
+              display:inline-block;">
+    div 3 green height 50px
+  </div>
+</div>

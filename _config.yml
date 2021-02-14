@@ -55,6 +55,10 @@ defaults:
     values:
       subcategory: "blog"
   - scope:
+      path: "_cs/css"
+    values:
+      subcategory: "css"
+  - scope:
       path: "_cs/general"
     values:
       subcategory: "general"

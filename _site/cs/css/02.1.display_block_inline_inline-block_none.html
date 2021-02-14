@@ -1,0 +1,538 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/fontello.css">
+    <link rel="icon" href="/favicon.ico">
+    <!-- Set no cache -->
+<meta http-equiv="Expires" content="0"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+
+<!-- Naver Search Advisor Verification -->
+<meta name="naver-site-verification" content="ca2c024f54e47d3951b6219c5e4011dfdaf4d49f" />
+
+<!-- Google Search Console Verification -->
+<meta name="google-site-verification" content="ekab94Y4ePSDcV48eaZOqnlhnBfXIoXPQ2VJ76z3hW8" />
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SZC2V9HFTJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SZC2V9HFTJ');
+</script>
+
+    <!--jakyll plugins -->
+
+<!--jakyll-seo-->
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>css display - block, inline, inline-block, none | 공부하는 하루</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="css display - block, inline, inline-block, none" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="display: block" />
+<meta property="og:description" content="display: block" />
+<link rel="canonical" href="https://blogharu.github.io/cs/css/02.1.display_block_inline_inline-block_none.html" />
+<meta property="og:url" content="https://blogharu.github.io/cs/css/02.1.display_block_inline_inline-block_none.html" />
+<meta property="og:site_name" content="공부하는 하루" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-14T22:12:44+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="css display - block, inline, inline-block, none" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"https://blogharu.github.io/cs/css/02.1.display_block_inline_inline-block_none.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogharu.github.io/cs/css/02.1.display_block_inline_inline-block_none.html"},"headline":"css display - block, inline, inline-block, none","dateModified":"2021-02-14T22:12:44+09:00","description":"display: block","datePublished":"2021-02-14T22:12:44+09:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!--jakyll-feed-->
+<link type="application/atom+xml" rel="alternate" href="https://blogharu.github.io/feed.xml" title="공부하는 하루" />
+
+    <!-- MathJax -->
+
+<script type="text/javascript">
+  MathJax = {
+    options:{
+      skipHtmlTags: {'[-]':['pre']}
+    }
+  }
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+    <title>css display - block, inline, inline-block, none</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav>
+  <div class="header-nav-categories"><div>
+    <a href="/cs" >
+      CS
+    </a>
+    </div><div>
+    <a href="/about" >
+      About
+    </a>
+    </div></div>
+
+  <div class="header-nav-others"><div class="set-dark-mode">
+  <p style='font-family:fontello; margin:0px;'>&#xf185
+  <label class="switch">
+    <input type="checkbox" class="set-darkmode">
+    <span class="slider round"></span>
+  </label>
+  &#xf186</p>
+</div>
+<script src="/assets/script/Darkmode.js"></script>
+<!---->
+  </div>
+  <div style="clear:both"></div>
+</nav>
+
+
+      <div class="main-header">
+  <header class="header-title">
+    <a href="/"><h1>공부하는 하루</h1></a>
+    <p>매일매일 조금씩 공부해보자</p>
+  </header>
+</div>
+
+      <div class="content">
+      <section class="post">
+  <div>
+    
+<header class="post-title">
+  <h3>2.1&nbsp;&nbsp;css display - block, inline, inline-block, none</h3>
+  <p>[<a href="/cs"> CS</a> / <a href="/cs/css">css</a> ] 2021-02-14</p>
+</header>
+
+    <div class="post-content">
+      <img class="post-title-img" src="/assets/images/cs/css/2.1/01-title.png" width="500px">
+      <h3>display: block</h3>
+
+<pre>
+block 속성값은 해당 요소가 새 줄에서 시작하고 그 요소가 가질 수 있는 최대한의 width 값을 갖습니다. width 값을 설정할 수 있지만, 공간이 있어도 다음 요소가 옆에 오지 못합니다. 또한 height 값을 설정할 수 있습니다. p 와 div 는 초깃값으로 display: block 을 갖는데 그러기 때문에 새 줄에서 시작하게 됩니다.
+</pre>
+
+<h4>display: block 코드</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:gray;
+            width:500px;
+            height:200px;"</span><span class="nt">&gt;</span>
+  div parent gray width 500px
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:red;
+              width:200px;"</span><span class="nt">&gt;</span>
+    div 1 red width 200px
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:blue;
+              width:200px;"</span><span class="nt">&gt;</span>
+    div 2 blue width 200px
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:green;
+              height:50px;"</span><span class="nt">&gt;</span>
+    div 3 green height 50px
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h4>display: block 결과</h4>
+
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;">
+    div 3 green height 50px
+  </div>
+</div>
+
+<h3>display: inline</h3>
+
+<pre>
+inline 속성값은 block 속성값처럼 새로운 줄에서 시작하지 않습니다. 또한 width 값과 height 값을 설정할 수 없습니다. 이는 inline 속성은 요소 안의 content 가 딱 출력될 정도의 width 와 height 값을 갖기 때문입니다. inline 은 새로운 줄에서 시작하지 않으니 두 개의 요소가 연속적으로 나오게 할 수 있습니다. span 과 a 태그는 초깃값으로 display: inline 을 갖습니다.
+</pre>
+
+<h4>display: inline 코드</h4>
+
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:gray;
+            width:500px;
+            height:200px;"</span><span class="nt">&gt;</span>
+  div parent gray width 500px
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:red;
+              width:200px;
+              display:inline;"</span><span class="nt">&gt;</span>
+    div 1 red width 200px
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:blue;
+              width:200px;
+              display:inline;"</span><span class="nt">&gt;</span>
+    div 2 blue width 200px
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:green;
+              height:50px;
+              display:inline;"</span><span class="nt">&gt;</span>
+    div 3 green height 50px
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h4>display: inline 결과</h4>
+
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;
+              display:inline;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;
+              display:inline;">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;
+              display:inline;">
+    div 3 green height 50px
+  </div>
+</div>
+
+<h3>display: inline-block</h3>
+
+<pre>
+inline-block 속성값은 새 줄에서 시작하지 않습니다. 또한 inline 같이 content 가 출력될 만큼의 최소한의 width 와 height 값을 갖지 않습니다. 따라서 width 값과 height 값을 자유롭게 설정할 수 있고 두 개의 요소가 연속적으로 나열될 수 있습니다.
+</pre>
+
+<h4>display: inline-block 코드</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:gray;
+            width:500px;
+            height:200px;"</span><span class="nt">&gt;</span>
+  div parent gray width 500px
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:red;
+              width:200px;
+              display:inline-block;"</span><span class="nt">&gt;</span>
+    div 1 red width 200px
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:blue;
+              width:200px;
+              display:inline-block;"</span><span class="nt">&gt;</span>
+    div 2 blue width 200px
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:green;
+              height:50px;
+              display:inline-block;"</span><span class="nt">&gt;</span>
+    div 3 green height 50px
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h4>display: inline-block 결과</h4>
+
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;
+              display:inline-block;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;
+              display:inline-block;">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;
+              display:inline-block;">
+    div 3 green height 50px
+  </div>
+</div>
+
+<h3>display: none</h3>
+
+<pre>
+none 속성값은 해당 요소를 화면에서 없애버립니다. 비슷한 거로 visibility: hidden 이 있는데 이것은 해당 요소가 차지하던 공간은 남아있지만 화면에 출력이 안 되는 반면 display: none 은 해당 요소가 차지하던 공간도 없애버립니다.
+</pre>
+
+<h4>display: none 코드</h4>
+
+<pre>
+inline-block 코드에서 div 2 에 display: none 을 사용하겠습니다.
+</pre>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:gray;
+            width:500px;
+            height:200px;"</span><span class="nt">&gt;</span>
+  div parent gray width 500px
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:red;
+              width:200px;
+              display:inline-block;"</span><span class="nt">&gt;</span>
+    div 1 red width 200px
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:blue;
+              width:200px;
+              display:none;"</span><span class="nt">&gt;</span>
+    div 2 blue width 200px
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:green;
+              height:50px;
+              display:inline-block;"</span><span class="nt">&gt;</span>
+    div 3 green height 50px
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h4>display: none 결과</h4>
+
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;
+              display:inline-block;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;
+              display:none;">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;
+              display:inline-block;">
+    div 3 green height 50px
+  </div>
+</div>
+
+<h4>visibility: hidden 코드</h4>
+
+<pre>
+inline-block 코드에서 div 2 에 visibility: hidden 을 사용하겠습니다.
+</pre>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:gray;
+            width:500px;
+            height:200px;"</span><span class="nt">&gt;</span>
+  div parent gray width 500px
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:red;
+              width:200px;
+              display:inline-block;"</span><span class="nt">&gt;</span>
+    div 1 red width 200px
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:blue;
+              width:200px;
+              display:inline-block;
+              visibility: hidden"</span><span class="nt">&gt;</span>
+    div 2 blue width 200px
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"background-color:green;
+              height:50px;
+              display:inline-block;"</span><span class="nt">&gt;</span>
+    div 3 green height 50px
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<h4>visibility: hidden 결과</h4>
+
+<div style="background-color:gray;
+            width:500px;
+            height:200px;">
+  div parent gray width 500px
+  <div style="background-color:red;
+              width:200px;
+              display:inline-block;">
+    div 1 red width 200px
+  </div>
+  <div style="background-color:blue;
+              width:200px;
+              display:inline-block;
+              visibility: hidden">
+    div 2 blue width 200px
+  </div>
+  <div style="background-color:green;
+              height:50px;
+              display:inline-block;">
+    div 3 green height 50px
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="comment-wrap">
+  <a></a>
+  <div class="comment hidden">
+    <div id="disqus_thread" style="border-top:1px solid var(--color-border);"></div>
+      <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          /*
+          var disqus_config = function () {
+          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          */
+          (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          s.src = 'https://blogharu-github-io.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  <script src="/assets/script/post-comment.js"></script>
+</div>
+
+
+</section>
+<div class="post-nav"><div class="post-nav-prev"><div class="post-nav-arrow"><이전
+    </div>
+    <div class="post-nav-title">
+      <a href="/cs/css/02.display.html">2. css display 속성 </a>
+    </div></div>
+  <div class="post-nav-contents">
+    <a href="/cs/css">목차</a>
+  </div>
+  <div class="post-nav-next"><p>None</p></div>
+</div>
+
+<div class="contents-list-wrapper">
+  <div class="contents-list">
+
+
+  </div>
+</div>
+<script src="/assets/script/post-contents-list.js"></script>
+
+
+
+
+
+      </div>
+      <div style="clear:both"></div>
+<footer><div class="footer">
+  <hr>
+</div></footer>
+
+    </div>
+    <script src="/assets/script/main.js"> </script>
+  </body>
+</html>
