@@ -1,0 +1,472 @@
+---
+title: css position - static, relative, fixed, absolute, sticky
+upload: 2021-02-14
+page: 3.1
+thumbnail: true
+---
+
+<h3>position: static</h3>
+
+<pre>
+static 속성값은 초기 position 값으로 지정되는 값입니다. top, bottom, left, right 속성의 영향을 받지 않습니다.
+</pre>
+
+<h4>position: static 코드</h4>
+
+<pre>
+width 100px height 50px 인 div 에 top, bottom, left, right 값을 주고 변화를 살펴보도록 하겠습니다. 아래는 코드입니다.
+</pre>
+
+{% highlight html linenos%}
+<div style="background-color:gray;
+            width:500px;
+            height:500px;">
+  div parent gray width 500px height 500px
+  <div style="background-color:red;
+              width:100px;
+              height:50px;
+              top:50px;">
+    div 1 red <br /> top 50px
+  </div>
+  <div style="background-color:blue;
+              width:100px;
+              height:50px;
+              bottom:50px;">
+    div 2 blue bottom 50px
+  </div>
+  <div style="background-color:green;
+              width:100px;
+              height:50px;
+              left:50px;">
+    div 3 green<br />left 50px
+  </div>
+  <div style="background-color:purple;
+              width:100px;
+              height:50px;
+              right:50px;">
+    div 4 purple right 50px
+  </div>
+</div>
+{% endhighlight %}
+
+<h4>position: static 결과</h4>
+
+<pre>
+position 의 초깃값이 static 이기 때문에 top, bottom, left, right 의 영향을 받지 않고 div display: block 형식대로 출력됨을 알 수 있습니다.
+</pre>
+
+<div style="background-color:gray;
+            width:500px;
+            height:500px;">
+  div parent gray width 500px height 500px
+  <div style="background-color:red;
+              width:100px;
+              height:50px;
+              top:50px;">
+    div 1 red <br /> top 50px
+  </div>
+  <div style="background-color:blue;
+              width:100px;
+              height:50px;
+              bottom:50px;">
+    div 2 blue bottom 50px
+  </div>
+  <div style="background-color:green;
+              width:100px;
+              height:50px;
+              left:50px;">
+    div 3 green<br />left 50px
+  </div>
+  <div style="background-color:purple;
+              width:100px;
+              height:50px;
+              right:50px;">
+    div 4 purple right 50px
+  </div>
+</div>
+
+<h3>position: relative</h3>
+
+<pre>
+relative 속성은 해당 요소를 원래 있어야 할 위치에서 top, bottom, left, right 속성의 속성값만큼 이동한 위치에 출력합니다. top: 50px 은 위로 50px 의 공간을 준다고 생각하시면 됩니다. 그러므로 top: 50px 은 해당 요소가 원래 있어야 할 위치에서 아래로 50px 이동한 위치에 나타나게 됩니다. bottom, left, right 속성도 top 과 동일한 형태로 작동합니다.
+</pre>
+
+<h4>position: relative 코드</h4>
+
+<pre>
+static 에서 사용한 코드에 position: relative 를 넣도록 하겠습니다.
+</pre>
+
+{% highlight html linenos%}
+<div style="background-color:gray;
+            width:500px;
+            height:500px;">
+  div parent gray width 500px height 500px
+  <div style="background-color:red;
+              width:100px;
+              height:50px;
+              top:50px;
+              position:relative;">
+    div 1 red <br /> top 50px
+  </div>
+  <div style="background-color:blue;
+              width:100px;
+              height:50px;
+              bottom:50px;
+              position:relative;">
+    div 2 blue bottom 50px
+  </div>
+  <div style="background-color:green;
+              width:100px;
+              height:50px;
+              left:50px;
+              position:relative;">
+    div 3 green<br />left 50px
+  </div>
+  <div style="background-color:purple;
+              width:100px;
+              height:50px;
+              right:50px;
+              position:relative;">
+    div 4 purple right 50px
+  </div>
+</div>
+{% endhighlight %}
+
+<h4>position: relative 결과</h4>
+
+<pre>
+div 1 은 top: 50px 로 인하여 원래 위치에서 아래로 50px 이동한 위치에 출력되었습니다. div 2 는 원래 위치에서 위로 50px 이동한 위치에 출력되었습니다. div 3 과 div 4 도 동일한 효과가 나타났습니다.
+
+참고로 div 4 가 잘린 이유는 저의 글을 담는 div 가 overflow: hidden 으로 설정되어있기 때문입니다.
+</pre>
+
+<div style="background-color:gray;
+            width:500px;
+            height:500px;">
+  div parent gray width 500px height 500px
+  <div style="background-color:red;
+              width:100px;
+              height:50px;
+              top:50px;
+              position:relative;">
+    div 1 red <br /> top 50px
+  </div>
+  <div style="background-color:blue;
+              width:100px;
+              height:50px;
+              bottom:50px;
+              position:relative;">
+    div 2 blue bottom 50px
+  </div>
+  <div style="background-color:green;
+              width:100px;
+              height:50px;
+              left:50px;
+              position:relative;">
+    div 3 green<br />left 50px
+  </div>
+  <div style="background-color:purple;
+              width:100px;
+              height:50px;
+              right:50px;
+              position:relative;">
+    div 4 purple right 50px
+  </div>
+</div>
+
+<h3>position: fixed</h3>
+
+<pre>
+fixed 속성은 해당 요소가 viewport 를 기준으로 위치하도록 만듭니다. 그렇기 때문에 스크롤을 조절하더라도 화면에서 동일한 위치에 계속 위치하게 됩니다. viewport 를 기준으로 top, bottom, left, right 값만큼 떨어져서 위치하게 됩니다.
+</pre>
+
+<h4>position: fixed 코드</h4>
+
+<pre>
+fixed 는 viewport 를 기준으로 위치하므로 화면 좌우에 div 1 과 div 2 만 출력하겠습니다.
+</pre>
+
+{% highlight html linenos%}
+<div style="background-color:gray;
+            width:500px;
+            height:500px;">
+  div parent gray width 500px height 500px
+  <div style="background-color:red;
+              width:100px;
+              height:100px;
+              bottom:150px;
+              left:10px;
+              position:fixed;">
+    div 1 red <br /> fixed <br /> bottom:150px <br /> left:10px
+  </div>
+  <div style="background-color:blue;
+              width:100px;
+              height:100px;
+              bottom:150px;
+              right:10px;
+              position:fixed;">
+    div 2 blue <br /> fixed <br /> bottom:150px <br /> right:10px
+  </div>
+  <div style="background-color:green;
+              width:100px;
+              height:50px;
+              left:50px;">
+    div 3 green<br />left 50px
+  </div>
+  <div style="background-color:purple;
+              width:100px;
+              height:50px;
+              right:50px;">
+    div 4 purple right 50px
+  </div>
+</div>{% endhighlight %}
+
+<h4>position: fixed 결과</h4>
+
+<pre>
+화면 좌우에 div 1 과 div 2 가 위치함을 볼 수 있습니다. 그리고 스크롤을 이동하더라도 이들의 위치는 변하지 않음을 확인할 수 있습니다. div 3 와 div 4 는 position: static 이기 때문에 viewport 를 기준으로 출력인 안 됨을 알 수 있습니다.
+</pre>
+
+<div style="background-color:gray;
+            width:500px;
+            height:500px;">
+  div parent gray width 500px height 500px
+  <div style="background-color:red;
+              width:100px;
+              height:100px;
+              bottom:150px;
+              left:10px;
+              position:fixed;">
+    div 1 red <br /> fixed <br /> bottom:150px <br /> left:10px
+  </div>
+  <div style="background-color:blue;
+              width:100px;
+              height:100px;
+              bottom:150px;
+              right:10px;
+              position:fixed;">
+    div 2 blue <br /> fixed <br /> bottom:150px <br /> right:10px
+  </div>
+  <div style="background-color:green;
+              width:100px;
+              height:50px;
+              left:50px;">
+    div 3 green<br />left 50px
+  </div>
+  <div style="background-color:purple;
+              width:100px;
+              height:50px;
+              right:50px;">
+    div 4 purple right 50px
+  </div>
+</div>
+
+<h3>position: absolute</h3>
+
+<pre>
+absolute 속성은 fixed 와 비슷하지만 viewport 기준이 아니라 조상들 중 position 이 static 이 아닌 가장 가까운 조상 요소를 기준으로 위치하게됩니다. absolute 속성 또한 top, bottom, left, right 값만큼 떨어져서 위차하게 됩니다.
+</pre>
+
+<h4>position: absolute 코드</h4>
+
+<pre>
+div parent 에 position: relative 를 주고 div child 1 과 div child 2 를 주겠습니다. div child 1 은 position: static 을 div child 2 는 position: relative 를 주겠습니다. div child 1 은 div 1 red 와 div 2 blue 를, div child 2 는 div 3 green 과 div 4 purple 을 주겠습니다.
+</pre>
+
+{% highlight html linenos%}
+<div style="background-color:gray;
+            width:500px;
+            height:500px;
+            position:relative;">
+  div parent gray width 500px height 500px position: relative
+  <div style="width:400px;
+              height:200px;
+              position:static;
+              border:1px solid black;
+              margin:auto;">
+    div child 1 position: static
+    <div style="background-color:red;
+                width:100px;
+                height:50px;
+                top:50px;
+                left:0px;
+                position:absolute;">
+      div 1 red <br /> top 50px
+    </div>
+    <div style="background-color:blue;
+                width:100px;
+                height:50px;
+                bottom:50px;
+                left:0px;
+                position:absolute;">
+      div 2 blue bottom 50px
+    </div>
+  </div>
+  <div style="width:400px;
+              height:200px;
+              position:relative;
+              border:1px solid black;
+              margin:auto;">
+    div child 2 position: relative
+    <div style="background-color:green;
+                width:100px;
+                height:50px;
+                left:50px;
+                position:absolute;">
+      div 3 green<br />left 50px
+    </div>
+    <div style="background-color:purple;
+                width:100px;
+                height:50px;
+                right:50px;
+                position:absolute;">
+      div 4 purple right 50px
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+<h4>position: absolute 결과</h4>
+
+<pre>
+div 1 과 div 2 는 div child 1 이 position: static 이기 때문에 div child 1 을 기준으로 위치하지 않습니다. 바로 다음 조상인 div parent 는 position: static 이 아니기 때문에 div parent 를 기준으로 위치함을 확인할 수 있습니다.
+
+div 3 과 div 4 는 div child 2 가 position: static 이 아니기 때문에 div child 2 를 기준으로 위차함을 확인할 수 있습니다.
+</pre>
+
+<div style="background-color:gray;
+            width:500px;
+            height:500px;
+            position:relative;">
+  div parent gray width 500px height 500px  position: relative
+  <div style="width:400px;
+              height:200px;
+              position:static;
+              border:1px solid black;
+              margin:auto;">
+    div child 1 position: static
+    <div style="background-color:red;
+                width:100px;
+                height:50px;
+                top:50px;
+                left:0px;
+                position:absolute;">
+      div 1 red <br /> top 50px
+    </div>
+    <div style="background-color:blue;
+                width:100px;
+                height:50px;
+                bottom:50px;
+                left:0px;
+                position:absolute;">
+      div 2 blue bottom 50px
+    </div>
+  </div>
+  <div style="width:400px;
+              height:200px;
+              position:relative;
+              border:1px solid black;
+              margin:auto;">
+    div child 2 position: relative
+    <div style="background-color:green;
+                width:100px;
+                height:50px;
+                left:50px;
+                position:absolute;">
+      div 3 green<br />left 50px
+    </div>
+    <div style="background-color:purple;
+                width:100px;
+                height:50px;
+                right:50px;
+                position:absolute;">
+      div 4 purple right 50px
+    </div>
+  </div>
+</div>
+
+
+<h3>position: sticky</h3>
+
+<pre>
+sticky 속성은 평소에는 position: static 위치에 배치되지만 만약 지정된 top, bottom, left, right 값을 넘어서게 되면 해당 위치에 고정되게 됩니다.
+
+요소가 고정되는 위치는 scroll 기준입니다. 조상 요소 중 가장 가까운 scroll 기준으로 작동됩니다. 만약 조상 요소 중 scroll 이 없다면 viewport 기준으로 작동합니다. 그러나 만약 조상 요소 중 overflow: hidden 이나 overflow: auto 가 있으면 sticky 기능이 작동되지 않습니다.
+
+이 외에도 작동되지 않는 경우가 종종 있는데 인터넷에 찾아보시면 나옵니다.
+</pre>
+
+<h4>position: sticky 코드</h4>
+
+<pre>
+이 글을 담은 div 에 overflow: hidden 이 돼 있어서 parent div 에 scroll 을 만들었습니다. div 2 가 top: 0px 에 고정되게 만들었습니다. 코드를 보면 position: -webkit-sticky 가 있는데 이는 사파리 브라우저에서도 동작하려면 필요하기 때문입니다.
+</pre>
+
+{% highlight html linenos%}
+<div style="background-color:gray;
+            width:500px;
+            height:100px;
+            overflow:scroll;">
+  div parent gray width 500px height 500px
+  <div style="background-color:red;
+              width:120px;
+              height:50px;">
+    div 1 red
+  </div>
+  <div style="background-color:blue;
+              width:100px;
+              height:50px;
+              top:0px;
+              position:-webkit-sticky;
+              position:sticky;">
+    div 2 blue sticky
+  </div>
+  <div style="background-color:green;
+              width:120px;
+              height:50px;">
+    div 3 green
+  </div>
+  <div style="background-color:purple;
+              width:120px;
+              height:50px;">
+    div 4 purple
+  </div>
+</div>
+{% endhighlight %}
+
+<h4>position: sticky 결과</h4>
+
+<pre>
+scroll 을 내리면 div 2 가 top: 0px 때 그 위치에 고정됨을 알 수 있습니다.
+</pre>
+
+<div style="background-color:gray;
+            width:500px;
+            height:100px;
+            overflow:scroll;">
+  div parent gray width 500px height 500px
+  <div style="background-color:red;
+              width:120px;
+              height:50px;">
+    div 1 red
+  </div>
+  <div style="background-color:blue;
+              width:100px;
+              height:50px;
+              top:0px;
+              position:-webkit-sticky;
+              position:sticky;">
+    div 2 blue sticky
+  </div>
+  <div style="background-color:green;
+              width:120px;
+              height:50px;">
+    div 3 green
+  </div>
+  <div style="background-color:purple;
+              width:120px;
+              height:50px;">
+    div 4 purple
+  </div>
+</div>
