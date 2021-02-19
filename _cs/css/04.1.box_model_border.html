@@ -1,0 +1,110 @@
+---
+title: css box model - border
+upload: 2021-02-19
+page: 4.1
+thumbnail: true
+---
+
+<h3>복습</h3>
+
+<pre>
+저번 글에서 저희는 box model 에 대하여 배웠습니다. box model 은 content, padding, border, margin 으로 이루어집니다.
+
+content 는 글 또는 이미지가 오는 공간으로 width 와 height 로 크기를 조절 가능합니다. padding 은 content 주변에 투명한 빈공간을 만들고, border 는 padding 주변에 테두리를 만들고, 마지막으로 margin 은 border 주변에 투명한 빈공간을 만듭니다.
+
+오늘은 border 를 설정하는 방법에 대하여 자세히 알아보도록 하겠습니다.
+</pre>
+
+<h3>border 구성 요소</h3>
+
+<pre>
+border 는 테두리를 만드는데 이 테두리는 width, style, color, side, radius 설정이 가능합니다. 간략하게 설명하자면 아래와 같습니다.
+
+width 는 테두리의 굵기를 설정합니다.
+
+style 은 테두리의 모양을 설정합니다. ex) 점선, 실선 등등
+
+color 는 테두리의 색을 설정합니다.
+
+side 는 테두리가 오는 면을 설정합니다.
+
+radius 는 테두리의 끝을 둥글게 설정합니다.
+</pre>
+
+<h4>width, style, color</h4>
+
+<pre>
+width 는 테두리 굵기를, style 은 테두리의 모양을, 그리고 color 는 테두리의 색을 설정합니다. 이중 style 은 아래 값들을 사용할 수 있습니다.
+
+<div style="border-bottom: 5px solid red; margin-bottom:5px;">solid: 실선</div><div style="border-bottom: 5px dotted red; margin-bottom:5px;">dotted: 점선</div><div style="border-bottom: 5px dashed red; margin-bottom:5px;">dashed: 파선</div><div style="border-bottom: 5px double red; margin-bottom:5px;">double: 실선 2개</div><div style="border: 10px groove red; margin-bottom:10px;">groove</div><div style="border: 10px ridge red; margin-bottom:10px;">ridge</div><div style="border: 10px inset red; margin-bottom:10px;">inset</div><div style="border: 10px outset red; margin-bottom:10px;">outset</div><div style="border-bottom: 5px none red; margin-bottom:5px;">none 또는 hidden: 테두리 없음</div>
+width, style, color 는 아래와 같이 설정 가능합니다.
+
+border-width: 10px; // 테두리 굵기를 10px 로 설정
+border-style: dotted; // 테두리를 점선으로 설정
+border-color: red; // 테두리를 빨간색으로 설정
+
+width, style, color 는 한 번에 설정이 가능합니다. 위의 내용을 한 번에 설정하면 다음과 같습니다.
+
+border: 10px dotted red;
+</pre>
+
+<h4>side</h4>
+
+<pre>
+side 는 면을 설정합니다. 면은 padding 과 margin 때와 같이 top, bottom, left, right 를 설정 가능하며 border 옆에 원하는 면을 써주시면 됩니다. 아래는 예시입니다.
+
+border-top-width: 10px; // 위쪽 테두리 굵기를 10px 로
+border-bottom-style: dotted;// 아래쪽 테두리를 점선으로
+border-left-color: red; // 왼쪽 테두리를 빨간색으로
+border-right: 10px dotted red;  // 오른쪽 테두리를 굵기 10px, 점선, 빨간색으로 설정
+</pre>
+
+<h5>side - 코드</h5>
+
+<pre>
+위의 css 로 div 를 생성해보겠습니다. 코드는 아래와 같습니다.
+</pre>
+
+{% highlight html linenos%}
+<div style="border-top-width: 10px;
+            border-bottom-style: dotted;
+            border-left-color: red;
+            border-right: 10px dotted red;">
+  side - 코드
+</div>
+{% endhighlight %}
+
+<h5>side - 결과</h5>
+
+<pre>
+<div style="  border-top-width: 10px;
+              border-bottom-style: dotted;
+              border-left-color: red;
+              border-right: 10px dotted red;">side - 코드</div>
+결과를 보시면 위쪽과 왼쪽 테두리가 생성되지 않았습니다. 그 이유는 style 의 초깃값이 none 이기 때문입니다. width 의 초깃값은 medium 이고 color 의 초깃값은 글자색이기 때문에 아래쪽 테두리는 글자색 medium 크기임을 알 수 있습니다.
+</pre>
+
+
+<h4>radius</h4>
+
+<pre>
+radius 는 테두리의 끝을 둥글게 설정합니다. 설정은 아래와 같이 합니다.
+
+border-radius: 10px;
+
+<div style="border: 5px solid red;
+            border-radius: 10px;">style="border: 5px solid red;
+       border-radius: 10px;"</div>
+radius 도 side 설정이 가능합니다. 설정은 아래와 같이 합니다.
+
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+
+<div style="border: 5px solid red;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;">style="border: 5px solid red;
+       border-top-left-radius: 10px;
+       border-bottom-right-radius: 10px;"</div>
+</pre>
