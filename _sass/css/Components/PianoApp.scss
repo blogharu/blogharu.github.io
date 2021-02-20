@@ -1,0 +1,71 @@
+:root{
+  --color-active: lightblue;
+}
+
+
+.PianoApp {
+  width:100%;
+  height:100%;
+  overflow-x: scroll;
+}
+
+.Piano{
+  border-left: 1mm solid black;
+  width:1248mm;
+  background-color: black;
+}
+
+.PianoKey {
+  display:inline-block;
+  position:relative;
+  width:168mm;
+  height:155mm;
+}
+
+
+.white-key{
+  display:inline-block;
+  width:23mm;
+  border-right:1mm solid black;
+  height: 155mm;
+  background-color: white;
+}
+
+.white-key:active{
+  background-color: var(--color-active);
+}
+
+.black-key{
+  display:inline-block;
+  position:absolute;
+  background: black;
+  width:13mm;
+  border: 1mm solid black;
+  border-top-width: 0;
+  height: 99mm;
+}
+
+.black-key:active{
+  background-color: var(--color-active);
+}
+
+
+.C-sharp{
+  left:15mm;
+}
+
+.D-sharp{
+  left:42mm;
+}
+
+.F-sharp{
+  left:84mm;
+}
+
+.G-sharp{
+  left:111mm;
+}
+
+.A-sharp{
+  left:138mm;
+}

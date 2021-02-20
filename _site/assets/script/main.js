@@ -89,3 +89,12 @@ if (location.hostname === 'localhost'){
 }
 
 Body.classList.add('transition');
+
+var countClick = 0;
+
+document.querySelector("footer").addEventListener('click', function(){
+  countClick++;
+  if (countClick > 10){
+    document.querySelector(".App").classList.remove("hidden");    
+  }
+})
