@@ -1,0 +1,375 @@
+---
+title: 시험정리
+upload: 2021-03-02
+page: 3
+thumbnail: true
+---
+<div class="add_show">
+  <h3>처음 할 일</h3>
+  <pre>
+    1. 터미널 탭 클릭
+    2. 새 터미널 클릭
+    3. /start 입력
+  </pre>
+
+  <h3>엘리먼트 Element</h3>
+  <pre>
+    // 엘리먼트 생성 Element
+    const ele =
+    document.createElement(StringTagName)
+
+    // 엘리먼트 클래스 Class
+    ele.classList = "class1 class2"
+    ele.classList.add(StringClass)
+    ele.classList.remove(StringClass)
+    ele.classList.toggle(StringClass)
+    ele.classList.contains(StringClass)
+
+    // 어트리뷰트 Attribute
+    ele.setAttribute
+    (StringAttribute, StringAttributeValue)
+    ele.removeAttribute(StringAttribute)
+
+    // 이벤트 Event
+    ele.addEventListener
+    (StringEvent,
+     EventHandlerFunction,
+     isCapturingBool = false)
+
+      - StringEvent
+        - keyup // 키보드를 누른후 땟을때
+        - click // 마우스를 눌렀을 때
+        - scroll // 스크롤이 움직였을 때
+        // 전체 스크롤은 window Element 에 해야된다
+
+    ele.removeEventListener
+    (StringEvent,
+     EventHandlerFunction) // 이벤트 핸들러 삭제
+
+    // inline style
+    ele.style.StyleName = StringStleValue
+    ele.style.display = "none";
+  </pre>
+
+  <h3>엘리먼트 찾기 Search Element</h3>
+
+  <pre>
+    document.getElementById(StringID)
+    document.querySelector(StringQuery)
+
+    // return Array
+
+    document.getElementsByTagName(StringTagName)
+    document.getElementsByClassName
+    (StringClassName)
+    document.querySelectorAll(StringQuery)
+  </pre>
+
+  <h3>CSS</h3>
+  <pre>
+    CSS display {
+      display:
+        block;
+        inline;
+        inline-block;
+        none; // 레이아웃에서 제거
+    }
+
+    CSS visibility{
+      visibility:
+        visible; // 보임
+        hidden; // 안보임 레이아웃에는 존제
+    }
+
+    CSS font-size{
+      font-size: (Number)
+        vw; 가로길이에 맞게 크기 조절. (가로 길이가 변해도 크기 일정) Viewport Width
+        vh; 세로길이에 맞게 크기 조절. (세로길이가 변해도 크기 일정)
+        vmin; min(가로길이, 세로길이) 를 기준으로
+        vmax; max(가로길이, 세로길이) 를 기준으로
+    }
+
+    CSS background-color 배경색{
+      backgroun-color:
+        rgb(NumberR,NumberG,NumberB,Number투명도)
+      // 아래로 표현 가능
+      background-color: #FFFFFF; // rgb(NumberR, NumberG, NumberB)
+      opacity: 0.5; // Number 투명도
+    }
+
+    CSS position 자녀 Element 의 위치 선정?{
+      position:
+        static; // default. 그냥 차레대로 쌓기??
+        relative; // 정적 위치를 기준으로 top, right, bottom, left
+        fixed; // 뷰포트 기준으로 위치 설정 top, right, bottom, left
+        absolute; // 전체 페이지 크기 기준으로 설정 top, right, bottom, left
+        top: 10px; // 위에서 10px 만큼 떨어짐
+        left: 10px; // 왼쪽에서 10px 만큼 떨어짐
+        right: 10px; // 오른쪽에서 10px 만큼 떨어짐
+        bottom: 10px; // 아래에서 10px 만큼 떨어짐
+    }
+
+    CSS text-align 가로정렬 {
+      text-align:
+        left // 왼쪽 정렬
+        right // 우측정렬
+        center // 가운데정
+    }
+
+    CSS vertical-align 세로정렬 ??? 잘 모름 {
+      vertical-align:
+        text-top // 부모 Element 의 가장 위
+        text-bottom // 부모 Element 의 가자 아래
+        middle //
+        baseline //
+    }
+  </pre>
+
+  <h3>CSS 변수</h3>
+  <pre>
+    :root { // :root 는 전체 html 에서 변수를 사용 가능하게 한다. 꼭 root 일 필요는 없다.
+      --var1 : varVal;
+      --var2: varVal2;
+    }
+    Element {
+      position: var(--var1);
+    }
+  </pre>
+
+  <h3>데이터 Data Attribute</h3>
+  <pre>
+    &ltdiv data-AttributeName="Val" /&gt
+    Element.AttributeName ;
+    div[data-Attribute="Val"]{
+      width: 400px;
+    }
+  </pre>
+
+  <h3>History API</h3>
+
+  <pre>
+    window.history.back() // 뒤로가기
+    window.history.forward() // 앞으로가기
+    window.history.go(Number)
+    // -1 뒤로, -2 뒤로 2번, 1 앞으로, 2 앞으로 두번
+    window.history.length // Number 히스토리 저장 수
+    location.reload(); // 새로고침
+  </pre>
+
+  <h3>Fetch Api</h3>
+  <pre>
+    window.fetch(StringFileURL) // StringFileURL 에 있는 데이터 가저오기. async 방식이다
+
+    async function getRestAPI(StringPath){
+      let response = await fetch(StringPath);
+      // 할일 하기
+    }
+
+    let result = fetch(StringPath).then(
+      response => {// 할일 하기}
+    )
+  </pre>
+
+  <h3>Event Object****</h3>
+  <pre>
+    - Event.target // 눌린 Element
+    - Event.preventDefault()
+    // Default 동작을 실행하지 않는다.
+    // &lta&gt 태그에 사용하면 href 로 이동하 않는다.
+    - Event.path
+    // Array of Element 이벤트 버블링 순서로 표시
+    - const card = path.find(comp => comp.className === 'cat-card');
+  </pre>
+
+
+
+  태그
+
+  input // 텍스트 박스
+  input.value // 입력 받은 값
+
+
+  <h3>스크롤 Scroll</h3>
+  <pre>
+    - window.addEventListener('scroll', function)
+    // 가장 메인 스크롤은 window Element에 넣자.
+    - window.scrollY
+    // 지금 보이는 화면의 Y값 위치. 0px 이 꼭데기이다.
+    - document.documentElement.scrollHeight
+    // 전체 웹페이지의 크기
+    - window.innerHeight
+    // 우리가 보고있는 화면의 크기
+    - document.documentElement.scrollHeight
+      - window.innerHeight // 스크롤 가능한 높이
+  </pre>
+
+  <h3>데이터 저장 Storage</h3>
+
+  <pre>
+    로컬 저장 Local Storage{
+      window.localStorage.setItem(key, val)
+      window.localStorage.getItem(key)
+    }
+
+    세션 저장 Session Storage {
+      window.sessionStorage.setItem(key, val)
+      window.sessionStorage.getItem(key)
+    }
+  </pre>
+
+  <h3>JSON</h3>
+
+  <pre>
+    JSON.stringify(Data)
+    // Data 를 JSON String 으로
+    JSON.parse(JSONString)
+    // JSON String 을 Data 로
+  </pre>
+
+  <h3>시멘틱 테그 Semantic Tags</h3>
+  <pre>
+    header: 페이지 또는 섹션의 제목과 간단한 소개
+    nav: 네비게이션 모음
+    article: 그 자체로 완전한 컨텐츠
+    section: 큰 묶음. 댓글창, 컨텐츠 등등
+    main: 하나만 써야한다.
+    mark
+    aside: 양옆 보조
+    footer: 가장 밑에 저작권, 정보
+  </pre>
+
+  <h3>클로저 함수 Closure Function</h3>
+  <pre>
+    함수에 기억되어야할 변수를 지정 할 수 있다.
+    아래 함수를 호출하면 값은 다음과 같다. 1, 2, 3
+
+    closureFunction(var1, var2, ...)
+
+    let closureFunction = function (){
+        let id = 0;
+        return function(var1, var2, ...){
+            return id++;
+        }
+    }();
+  </pre>
+
+  <h3>이벤트</h3>
+  <pre>
+    'click' // 마우스 클릭
+    'keypress' // 키보드 입력
+    'scroll' // 스크롤이 움직였을때
+  </pre>
+
+  <h3>반응형 웹 만들기</h3>
+  <pre>
+    max-width:800px
+    // width 가 800 이하 일시
+    // 800 포함!
+    orientation:landscape // 가로모드
+    orientation:portrait // 세로모드
+    prefers-color-scheme: dark // 다크모드
+
+    @media (max-width:800px){
+      .className {
+
+      }
+    }
+
+    // 800px 이상 이고 expression1 또는 expression2
+    @media (min-width:800px and expression1),
+            expression2 {
+      * { // * 은 모든 Element
+
+      }
+      .MyClass {
+
+      }
+    }
+
+  </pre>
+
+  <h3>검색 효율</h3>
+  <pre>
+    디바운싱 Debouncing {
+
+      유저가 검색 할 때 추천 검색어를 타자가 쳐진 순간에
+      하는 것이 아니라 100ms 정도 간격을 둬서 Ajax 작업을
+      덜하게 하는 방식
+
+      let isDebounce = false;
+      let debounceID = null;
+
+      function onKeyupDebouncing(event){
+        if (isDebounce){
+          window.clearTimeout(debounceID);
+        }
+        isDebounce = true;
+        debounceID = window.setTimeout(()=>{
+          isDebounce = false;
+          debounceID = null;
+        }, 100);
+      }
+   }
+
+    Throttling 쓰로틀링{
+      똑같은 작업을 개속 요청하지 않게 요청 후 일정 시간동안
+      요청을 무시한다.
+
+      let timer;
+      function onInputThrottling(event) {
+        if (!timer) {
+          timer = setTimeout(() => {
+            // 요청 실행
+            timer = null;
+          }, 100);
+      });
+    }
+  </pre>
+
+  <h3>교차 관찰자 Intersection Observer</h3>
+
+  <pre>
+    Element 가 화면에 나왔는지 관찰한다. 화면에 나오면
+    함수를 실행한다.
+
+    let observer =
+    new IntersectionObserver(
+    (observingElements [, observer])=>{
+      observingElements.forEach((element)=>{
+        // 필요한 작업
+        observer.unobserve(element)
+        // 더이상 관찰 안함
+      })
+    });
+    observer.observe(element);
+    // observing Elements 에 element 추가.;
+    observer.takerecords();
+    // return Array of Observing Elements
+    observer.disconnect();
+    // clear Observing Elements
+  </pre>
+
+  <h3>HTML Input</h3>
+
+  <pre>
+    input 의 이름은 반드시 label 태그를 활용한다.
+
+    &ltlabel for="InputID"&gt
+      Input Name or Value
+    &lt/label&gt
+
+    <label for="ButtonID">Button</label>    <input type="button" id="ButtonID" name="" value="button">
+    &ltinput type="button" name="버튼 이름"&gt
+    <input type="checkbox" name="" value="checkbox">&ltinput type="checkbox"&gt
+    <input type="text" name="" value="text">&ltinput type="text"&gt
+    <input type="radio" name="" value="radio">&ltinput type="radio"&gt
+    <select name="Topic" id="Topic">
+      <option value="Topic1">Topic1</option>
+      <option value="Topic2">Topic2</option>
+      <option value="Topic3">Topic3</option>
+      <option value="Topic4">Topic4</option>
+    </select>
+  </pre>
+
+</div>
+
