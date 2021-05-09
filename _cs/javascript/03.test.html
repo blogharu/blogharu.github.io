@@ -5,6 +5,234 @@ page: 3
 thumbnail: false
 ---
 <div class="add_show">
+  <h3> 표 만들기 </h3>
+    <pre> 
+PREV
+  CREATE DATABASE DatabaseName [CHARACTER SET utf8mb4 [COLLATE utf8mb4_general_ci]] ;
+  CREATE TABLE TableName (
+    ColName1 ColType1,
+    ColName2 ColType2,
+    ColName3 ColType3 ...
+  ); // create table
+
+  USE DatabaseName ; // change database to DatabaseName
+  DROP DATABASE DatabaseName ; // remove database DatabaseName
+  DROP TABLE TableName ; // remove table TableName [[from current database.]]
+
+  ALTER TABLE TableName Add ColName ColType; // add column to TableName
+  ALTER TABLE TableName Add ColName ColType; // add column to TableName
+
+  Dependency
+
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+
+  SELECT (col1, col2, col3, ... or *) FROM (table1, table2, ... or *);
+
+Database
+  CREATE DATABASE database_name; // database_name database 생성
+  USE database_name; // database 를 database_name 으로 바꾸기
+
+Table
+  SHOW TABLES // database 안의 모든 table 출력
+
+  CREATE TABLE
+    CREATE ((TEMPORARY)) TABLE ((IF NOT EXISTS)) table_name (col definitions) ((table options)) ((partition options))
+    CREATE TABLE table_name (
+      var1 var1type option1 option2,
+      var2 var2type,
+      varD varDtype DEFAULT defaultVal ... // table_name table 생성. 열로는 괄호속의 열들 생성
+      ((
+        // 여기서 부턴 또 옵션
+        PRIMAKRY KEY(var3, ...), // var3 은 PK 이다
+        UNIQUE(var4), // var4 는 유니크한 값이다
+        FOREIGN KEY(var5) REFERENCES table_name2(table_name2_PK), // var 5 는 table_name2 에서온 FK 이다
+        ON DELETE CASCADE, // data 삭제지 data 를 참조하던 data 도 삭제
+        ON UPDATE CASCADE, // data update 시 data 를 참조하던 data 도 update
+        ON UPDATE SET NULL, // data update 시 data 를 참조하던 data 를 NULL 로
+        ON UPDATE SET DEFAULT, // data update 시 data 를 참조하던 data 를 DEFAULT 값으로
+      ))
+    );
+    PRIMARY KEY (var3)
+
+    varTypes
+      1. Numeric
+        1. INTEGER, INT, SMALLINT
+        2. FLOAT, REAM,  DOUBLE PRECISION
+        4. DECIMAL(int, int)
+      2. Character string
+        1. CHAR(lengthInt), CHARACTER(lengthInt) // 그냥 정해진 길이의 데이터 사용
+        2. VARCHAR(lengthInt), CHAR VARYING(n), CHARACTER VARYING(n) // 데이터 길이에 따라 길이만큼 데이터 사용
+      3. Bit-string
+        1. BIT(lengthInt) // 정해진 길이
+        2. BIT VARYING(lengthInt) // 변하는 길이
+      4. Boolean
+        1. TRUE, FALSE, NULL
+      5. DATE
+        1. Ten positions
+        2. YYYY-MM-DD
+        3. Multiple mapping functions available in RDBMSs to change date formats
+
+    options
+      1. NOT NULL
+      2. DEFAULT val
+      3. CHECK (var >= someVal)
+      4. PRIMARY KEY
+      5. UNIQUE // also known as secondary key, candidate key
+      6. FOREIGN KEY(varKeyName) REFERENCES foreignTableName(foreignTableKey) EXTRAOPTIONs
+        1. Foreign 키가 변경됨에따른 추가 옵션 EXTRAOPTIONs
+          ON (DELETE 또는 UPDATE) (SET NULL 또는 SET DEFAULT 또는 CASCADE)
+      7. AUTO_INCREMENT
+
+  UPDATE TABLE // 테이블의 형식 변화! 데이터 말고!
+
+    ALTER TABLE table_name ADD COLUMN col_name col_name_type options; // table_name 에 col_name 열 추가
+
+  DROP TABLE DELETE
+    DROP TABLE table_name
+
+  INSERT DATA TO TABLE add data
+
+    INSERT INTO table_name VALUES (col1val, col2val, ...) // all col vals are given
+    INSERT INTO table_name (col1, col2, col3, ... ) VALUES (col1val, col2val, col3val,...) // only cols in (col1, ...) data are given in order.
+    INSERT INTO table_name SELECT ... // Add data from the table created by SELECT.
+
+  UPDATE DATA
+
+    UPDATE table_name SET col1 = newVal1 WHERE pk = targetPK
+
+  DELETE DATA
+
+    DELETE FROM table_name WHERE col1 = targetCol1 // 조건에 맞는 데이터만 삭제
+    DELETE FROM table_name // 다 삭제
+
+
+TABLE JOIN
+  table1 NATURAL JOIN table2
+
+</pre>
+  
+  <h3>SELECT</h3>
+  
+  <pre>
+
+  SELECT (()) FROM (()) WHERE (()) GROUP BY (()) HAVING (()) ORDER BY (()) // 이순서에 맞게 반드시 사용!
+    SELECT 선택될 열 표시
+    FROM 찾아볼 Table 표시
+    WHERE 데이터 조건 표시
+    GROUP BY 조건에 해당하는 데이터를 그룹화
+    HAVING 그룹 조건 표시
+    ORDER BY 최종 결과를 정렬
+
+  select ((distinct)) col1, table2.col2, col3 ((as newColName3)), function1 ((as newFunctionName1)), function2 ...
+    from table1, table2 ((as newTableName2)), ...
+    where condition1 ANDOR condition2 ANDOR condition3 ...
+    order by col1 ((asc(default),desc)), col2 ((desc)), col3 ((desc)) ... // You have to use name that is shown in the table! use newColName if required
+
+  select * from tableName; // print all data with all columns in tableName
+  select col1, col2, col3, ... from table1 where col4 = val4; // from table1 print all data with col1, col2, col3 and col4 == val4
+  select distinct * from table // print add data with all columns from table but remove duplicated. 중복 없음
+
+  SELECT
+    SELECT [[DISTINCT]] col1, col2, col3 as newCol3, *
+    col + 1 같이 연산도 가능! 함수도 가능!
+    if (condition, "trueVal", "falseVal")
+
+  FROM
+    FROM table1, table2, table3 ((CROSS JOIN, INNER JOIN, NATURAL JOIN, OUTER JOIN)) table4 ((ON, USING -- when INNER JOIN)), subquery1 as table5
+
+    JOIN
+      1. CROSS JOIN: cross product. table1 CROSS JOIN table2 === table1, table2
+        for ele1 in table1{result.add(ele1*table2)}
+      2. NATURAL JOIN: no duplicate. 두 테이블에서 같은 col 이름에 대하여 값이 같을때만 데이터 생성.
+      3. INNER JOIN: 조건 만족하는 데이터 생성. ON 또는 USING 으로 조건을 주어야함
+        ON col1 < col2 // 다음과 같은 조건문이 와야함
+        USING (col1, col2, ...) // 열 이름이 col1, col2 이면 같은 값을 가져야함
+
+  WHERE
+    조건문 group 에 미적용
+
+  GROUP BY
+    GROUP BY col1, col2, ... (col1, col2, ... 값이 같은 데이터 끼리 소규모 Table 이 되고 Aggregate function 을 적용한다.)
+
+  HAVING
+    HAVING col1 > 40 // group 에서만 적용
+
+  ORDER BY
+    ORDER BY col1 ((ASC, DESC)), col2 ((ASC, DESC)), ...
+
+  LIMIT Int print Int number of data
+
+  condition
+    col1 = val1 // ==
+    col1 >= val1 // >=
+    col1 = val1 AND col2 = val2 // col1 == val1 && col2 == val2
+    col1 = val1 OR col2 = val2 // col1 == val1 || col2 == val2
+    (col1 = val1 AND col2 = val2) OR (col3 = val4)
+    col1 IS NOT NULL //
+    col1 != null, col1 <> null
+    col1 ((NOT)) IN subquerySetOrSet // SET == (val1, val2, ...)
+    ((NOT)) EXISTS subquery // check if subquery is empty
+    col1 (=, >, <>, ...) ALL/ANY set - checks to see if a relationship holds for every/one member of the set
+    col1 LIKE '%word2%' // word searches. % 는 * 과같다. *word2* 인 스트링 찾기.
+
+  subquery1 union subquery2 // both need same col names. Then it returns union.
+
+
+
+  function
+    TIMESTAMPDIFF(YEAR, birth, CURDATE())
+    CURDATE() // return current YEAR-MONTH-DAY
+    YEAR(DATE_VAR) // return YEAR
+    MONTH(DATE_VAR) // return MONTH
+    DAYOFMONTH(DATE_VAR) // return DAYOFMONTH
+    DATE_ADD(DATE_VAR, INTERVAL 1 MONTH) // return DATE that increased 1 month // 31 일에서 INTERVAL 1 DAY 하면 32일이 된다!
+    CAST(var as newType) // change var type to newType
+    DATE_FORMAT(varDateTime, formatString) // https://mariadb.com/kb/en/date_format/
+    SUBSTRING(var, startInt, endInt) // print substring of given string
+    1. Aggregate functions // 표를 하나의 값으로 요약
+      MAX(VAR) // return max. MIN(VAR)
+      COUNT(VAR) // return number of VAR where var is not null
+      SUM(VAR) // return 총합
+      AVG(var) // return average
+
+
+Variable
+  SET @varName = Val, @varName2 = Val2;
+
+
+  SET @ROW_NUM = -1;
+
+  SELECT `HOUR`, MAX(`COUNT`) as COUNT
+  FROM
+      (
+          (SELECT HOUR(DATETIME) as `HOUR`, COUNT(*) as `COUNT`
+          FROM ANIMAL_OUTS
+          GROUP BY `HOUR`)
+          UNION
+          (SELECT @ROW_NUM := @ROW_NUM + 1 as `HOUR`, 0 as `COUNT` FROM ANIMAL_OUTS LIMIT 24)  -- 0 ~ 23시, 모든 count 0
+      ) as result_set
+  GROUP BY `HOUR`
+  ORDER BY `HOUR`;
+
+WITH RECURSIVE
+
+  WITH RECURSIVE tableName AS (
+    SELECT 1 as n, CAST('charval' as char(50)) as str // initial set
+    UNION (ALL or DISTINCT)
+    SELECT n + 1, concat(str, str) from tableName where n < 5 // run until condition is false
+  )
+
+
+  </pre>
+
+
+
+  
+  
+  <!--
   <h3>처음 할 일</h3>
   <pre>
     1. 터미널 탭 클릭
@@ -370,6 +598,6 @@ thumbnail: false
       <option value="Topic4">Topic4</option>
     </select>
   </pre>
-
+-->
 </div>
 
